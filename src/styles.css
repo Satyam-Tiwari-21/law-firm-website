@@ -120,7 +120,7 @@
   width: 4rem;
   background: var(--gold);
 }
-@utility bg-hero { background-image: var(--gradient-hero); }
+@utility bg-hero { background: var(--gradient-hero); }
 @utility bg-veil { background-image: var(--gradient-veil); }
 @utility shadow-elegant { box-shadow: var(--shadow-elegant); }
 @utility container-x {
