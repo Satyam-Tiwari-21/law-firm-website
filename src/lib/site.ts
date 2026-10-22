@@ -121,17 +121,6 @@ export const leaders = [
     initials: "BB",
     bio: "Director of Justice Law Bridge Legal Services LLP.",
   },
-  {
-    name: "Co-Counsel",
-    role: "Co-Counsel / Advocate",
-    initials: "CC",
-    bio: "Experienced advocate providing support across a range of legal matters. [Placeholder for short professional biography].",
-    qualifications: ["LL.B.", "[Additional Qualification]"],
-    practiceAreas: ["General Civil & Criminal", "[Practice Area 2]"],
-    enrolment: "[Bar Council Enrolment Number (Placeholder)]",
-    experience: "[Years of Experience/Key Experience (Placeholder)]",
-    education: "[University/Institution (Placeholder)]",
-  },
 ];
 
 export type AdvocateProfile = {
@@ -141,18 +130,35 @@ export type AdvocateProfile = {
   initials: string;
   image?: string;
   shortBio: string;
+  biography: string;
   qualifications?: string[];
   practiceAreas?: string[];
   experience?: string;
+  enrolment?: string;
+  education?: string;
 };
 
 export const advocates: AdvocateProfile[] = [
+  {
+    slug: "co-counsel",
+    name: "Co-Counsel",
+    role: "Co-Counsel / Advocate",
+    initials: "CC",
+    shortBio: "Experienced advocate providing support across a range of legal matters.",
+    biography: "[Full, detailed professional biography for the Co-Counsel to be provided here. This section can describe their professional journey, key expertise, and approach to legal practice.]",
+    qualifications: ["LL.B.", "[Additional Qualification]"],
+    practiceAreas: ["General Civil & Criminal", "[Practice Area 2]"],
+    enrolment: "[Bar Council Enrolment Number (Placeholder)]",
+    experience: "[Years of Experience/Key Experience (Placeholder)]",
+    education: "[University/Institution (Placeholder)]",
+  },
   {
     slug: "associate-advocate-1",
     name: "Associate Advocate 1",
     role: "Associate Advocate",
     initials: "A1",
     shortBio: "Dedicated associate advocate with a focus on [specialty area].",
+    biography: "[Full, detailed professional biography for Associate Advocate 1 to be provided here.]",
     qualifications: ["LL.B."],
     practiceAreas: ["[Practice Area 1]", "[Practice Area 2]"],
   },
@@ -162,6 +168,7 @@ export const advocates: AdvocateProfile[] = [
     role: "Associate Advocate",
     initials: "A2",
     shortBio: "A skilled professional contributing to various legal cases and client matters.",
+    biography: "[Full, detailed professional biography for Associate Advocate 2 to be provided here.]",
     qualifications: ["LL.B.", "B.A."],
     practiceAreas: ["[Practice Area 3]"],
   },
