@@ -77,6 +77,8 @@ function Home() {
         </div>
       </section>
 
+      <FeaturedAdvocate />
+
       {/* Services */}
       <section className="bg-background py-24 md:py-32">
         <div className="container-x">
@@ -149,8 +151,6 @@ function Home() {
           <div className="mt-14"><LeadershipCards /></div>
         </div>
       </section>
-
-      <FeaturedAdvocate />
 
       <VisionMission />
       <CTASection />
