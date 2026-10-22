@@ -107,28 +107,46 @@ export function LeadershipCards() {
   );
 }
 
-export function AdvocateCard({ advocate }: { advocate: AdvocateProfile }) {
+export function FeaturedAdvocate() {
+  const coCounsel = advocates.find((a) => a.slug === "co-counsel");
+
+  if (!coCounsel) return null;
+
   return (
-    <Reveal className="group flex flex-col border border-border bg-card shadow-elegant">
-      <Link to={`/advocates/${advocate.slug}`} className="flex h-full flex-col">
-        <div className="relative grid aspect-[4/5] place-items-center bg-navy">
-          {advocate.image ? (
-            <img src={advocate.image} alt={`${advocate.name}, ${advocate.role}`} className="h-full w-full object-cover" />
-          ) : (
-            <>
-              <span className="font-serif text-6xl text-gold">{advocate.initials}</span>
-              <span className="absolute bottom-3 left-3 right-3 text-center text-[0.6rem] uppercase tracking-[0.2em] text-navy-muted">Photograph to be supplied</span>
-            </>
-          )}
-        </div>
-        <div className="flex flex-grow flex-col p-8">
-          <p className="eyebrow">{advocate.role}</p>
-          <h3 className="mt-3 text-3xl text-navy">{advocate.name}</h3>
-          <span className="gold-rule mt-5 w-10" />
-          <p className="mt-5 flex-grow leading-relaxed text-muted-foreground">{advocate.shortBio}</p>
-          <p className="mt-6 font-semibold text-gold">View Profile →</p>
-        </div>
-      </Link>
-    </Reveal>
+    <section className="bg-ivory py-24 sm:py-32">
+      <div className="container-x">
+        <Reveal>
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="eyebrow">Our Advocates</p>
+            <h2 className="mt-3 font-serif text-5xl text-navy">Co-Counsel / Advocate</h2>
+          </div>
+        </Reveal>
+        <Reveal delay={120}>
+          <div className="mt-16 grid items-center gap-12 border border-border bg-card p-8 shadow-elegant md:grid-cols-2 md:p-16">
+            <div className="relative aspect-[4/5] bg-navy">
+              {coCounsel.image ? (
+                <img
+                  src={coCounsel.image}
+                  alt={`${coCounsel.name}, ${coCounsel.role}`}
+                  className="h-full w-full object-cover"
+                />
+              ) : (
+                <div className="grid h-full w-full place-items-center">
+                  <span className="font-serif text-6xl text-gold">{coCounsel.initials}</span>
+                </div>
+              )}
+            </div>
+            <div>
+              <h3 className="font-serif text-4xl text-navy">{coCounsel.name}</h3>
+              <span className="gold-rule mt-6 w-16" />
+              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">{coCounsel.shortBio}</p>
+              <div className="mt-8">
+                <GoldButton to={`/advocates/${coCounsel.slug}`}>View Profile</GoldButton>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+    </section>
   );
 }
