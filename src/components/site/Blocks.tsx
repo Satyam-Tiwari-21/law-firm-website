@@ -103,9 +103,6 @@ export function LeadershipCards() {
           </Reveal>
         ))}
       </div>
-      <div className="mt-12 text-center">
-        <GoldButton to="/advocates">More Profiles</GoldButton>
-      </div>
     </>
   );
 }
@@ -113,7 +110,7 @@ export function LeadershipCards() {
 export function AdvocateCard({ advocate }: { advocate: AdvocateProfile }) {
   return (
     <Reveal className="group flex flex-col border border-border bg-card shadow-elegant">
-      <Link to={`/advocates/${advocate.slug}`}>
+      <Link to={`/advocates/${advocate.slug}`} className="flex h-full flex-col">
         <div className="relative grid aspect-[4/5] place-items-center bg-navy">
           {advocate.image ? (
             <img src={advocate.image} alt={`${advocate.name}, ${advocate.role}`} className="h-full w-full object-cover" />
@@ -124,11 +121,12 @@ export function AdvocateCard({ advocate }: { advocate: AdvocateProfile }) {
             </>
           )}
         </div>
-        <div className="p-8">
+        <div className="flex flex-grow flex-col p-8">
           <p className="eyebrow">{advocate.role}</p>
           <h3 className="mt-3 text-3xl text-navy">{advocate.name}</h3>
           <span className="gold-rule mt-5 w-10" />
-          <p className="mt-5 leading-relaxed text-muted-foreground">{advocate.shortBio}</p>
+          <p className="mt-5 flex-grow leading-relaxed text-muted-foreground">{advocate.shortBio}</p>
+          <p className="mt-6 font-semibold text-gold">View Profile →</p>
         </div>
       </Link>
     </Reveal>
