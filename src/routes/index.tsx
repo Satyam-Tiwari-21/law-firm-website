@@ -4,7 +4,7 @@ import hero from "@/assets/hero-columns.jpg";
 import library from "@/assets/library.jpg";
 import { seo, services, segments } from "@/lib/site";
 import { Reveal } from "@/components/site/Reveal";
-import { CTASection, GoldButton, LeadershipCards, SectionHeading, VisionMission } from "@/components/site/Blocks";
+import { CTASection, GoldButton, LeadershipCards, SectionHeading, VisionMission, FeaturedAdvocate } from "@/components/site/Blocks";
 
 export const Route = createFileRoute("/")({
   head: () => seo(
@@ -149,6 +149,8 @@ function Home() {
           <div className="mt-14"><LeadershipCards /></div>
         </div>
       </section>
+
+      <FeaturedAdvocate />
 
       <VisionMission />
       <CTASection />
