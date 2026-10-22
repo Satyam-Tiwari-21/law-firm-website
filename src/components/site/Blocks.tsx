@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { cn } from "@/lib/utils";
-import { leaders, mission, vision, type AdvocateProfile } from "@/lib/site";
+import { leaders, mission, vision, advocates, type AdvocateProfile } from "@/lib/site";
 
 export function SectionHeading({ eyebrow, title, intro, tone = "light", center }: { eyebrow: string; title: string; intro?: string; tone?: "light" | "dark"; center?: boolean }) {
   return (
