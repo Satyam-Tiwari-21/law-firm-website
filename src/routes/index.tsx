@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, Gavel, Landmark, LineChart, Check } from "lucide-react";
-import hero from "@/assets/hero-columns.jpg";
+import hero from "@/assets/hero-justice.jpg";
 import library from "@/assets/library.jpg";
 import { seo, services, segments } from "@/lib/site";
 import { Reveal } from "@/components/site/Reveal";
@@ -33,8 +33,8 @@ function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[88vh] overflow-hidden bg-navy">
-        <img src={hero} alt="Neoclassical columns of an institutional building at dusk" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover" />
+      <section className="relative min-h-[88vh] overflow-hidden">
+        <img src={hero} alt="Statue of Lady Justice" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-hero" />
         <div className="container-x relative flex min-h-[88vh] flex-col justify-center py-24">
           <p className="eyebrow animate-rise">Bridging People and Justice</p>
