@@ -12,6 +12,8 @@ export const firm = {
   whatsapp: "https://wa.me/918233224091",
   email: "Justicelawllp@gmail.com",
   location: "Sawai Madhopur, Rajasthan, India",
+  mobile: "8233224091",
+  hours: "9AM to 7PM"
 };
 
 export type Service = {
