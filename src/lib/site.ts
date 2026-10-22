@@ -109,9 +109,62 @@ export const segments: Segment[] = [
 ];
 
 export const leaders = [
-  { name: "Vikash Barar", role: "Director", initials: "VB", bio: "Practising Advocate with LL.B., LL.M., and PhD degrees in Law. Leads the firm's legal practice, dispute resolution, and legal awareness work from Sawai Madhopur, Rajasthan." },
-  { name: "Bhagwat Ram Barar", role: "Director", initials: "BB", bio: "Director of Justice Law Bridge Legal Services LLP." },
-  { name: "New Advocate", role: "Co-Council", initials: "NA", bio: "Placeholder bio for the new advocate." },
+  {
+    name: "Vikash Barar",
+    role: "Director",
+    initials: "VB",
+    bio: "Practising Advocate with LL.B., LL.M., and PhD degrees in Law. Leads the firm's legal practice, dispute resolution, and legal awareness work from Sawai Madhopur, Rajasthan.",
+  },
+  {
+    name: "Bhagwat Ram Barar",
+    role: "Director",
+    initials: "BB",
+    bio: "Director of Justice Law Bridge Legal Services LLP.",
+  },
+  {
+    name: "Co-Counsel",
+    role: "Co-Counsel / Advocate",
+    initials: "CC",
+    bio: "Experienced advocate providing support across a range of legal matters. [Placeholder for short professional biography].",
+    qualifications: ["LL.B.", "[Additional Qualification]"],
+    practiceAreas: ["General Civil & Criminal", "[Practice Area 2]"],
+    enrolment: "[Bar Council Enrolment Number (Placeholder)]",
+    experience: "[Years of Experience/Key Experience (Placeholder)]",
+    education: "[University/Institution (Placeholder)]",
+  },
+];
+
+export type AdvocateProfile = {
+  slug: string;
+  name: string;
+  role: string;
+  initials: string;
+  image?: string;
+  shortBio: string;
+  qualifications?: string[];
+  practiceAreas?: string[];
+  experience?: string;
+};
+
+export const advocates: AdvocateProfile[] = [
+  {
+    slug: "associate-advocate-1",
+    name: "Associate Advocate 1",
+    role: "Associate Advocate",
+    initials: "A1",
+    shortBio: "Dedicated associate advocate with a focus on [specialty area].",
+    qualifications: ["LL.B."],
+    practiceAreas: ["[Practice Area 1]", "[Practice Area 2]"],
+  },
+  {
+    slug: "associate-advocate-2",
+    name: "Associate Advocate 2",
+    role: "Associate Advocate",
+    initials: "A2",
+    shortBio: "A skilled professional contributing to various legal cases and client matters.",
+    qualifications: ["LL.B.", "B.A."],
+    practiceAreas: ["[Practice Area 3]"],
+  },
 ];
 
 export const vision = "To become a trusted one-stop legal and business support firm that makes justice and professional services accessible and affordable for all.";
