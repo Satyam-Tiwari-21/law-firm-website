@@ -55,27 +55,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Credibility */}
-      <section className="bg-ivory py-24 md:py-32">
-        <div className="container-x">
-          <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:items-end">
-            <SectionHeading eyebrow="The Integrated Model" title="One Firm. Multiple Dimensions of Professional Support." />
-            <Reveal><p className="text-lg leading-relaxed text-muted-foreground">
-              Legal requirements, documentation, finance, compliance and business decisions rarely arrive separately. Working through one professional relationship lets each be coordinated with the others — fewer hand-offs, clearer accountability, and advice that sees the whole picture.
-            </p></Reveal>
-          </div>
-          <div className="mt-16 grid border-t border-gold/40 md:grid-cols-3">
-            {pillars.map((p, i) => (
-              <Reveal key={p.title} delay={i * 120} className="border-b border-gold/20 py-10 md:border-b-0 md:px-8 md:first:pl-0 md:[&:not(:first-child)]:border-l">
-                <p className="font-serif text-5xl text-gold/60">0{i + 1}</p>
-                <p.icon className="mt-6 h-7 w-7 text-gold" strokeWidth={1.25} />
-                <h3 className="mt-5 text-2xl text-navy">{p.title}</h3>
-                <p className="mt-4 leading-relaxed text-muted-foreground">{p.text}</p>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       <FeaturedAdvocate />
 
