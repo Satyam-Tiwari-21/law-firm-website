@@ -24,7 +24,7 @@ export type Service = {
   summary: string;
   items: string[];
   beneficiaries: string;
-  situations: string[];
+  situations: string;
   scope: string;
 };
 
@@ -53,9 +53,9 @@ export const services: Service[] = [
       "Legal notices, replies, petitions and appeals",
       "Mediation, conciliation and arbitration",
     ],
-    beneficiaries: "",
-    situations: [],
-    scope: "Court representation is undertaken by a duly enrolled and authorized advocate in the relevant matter.",
+    beneficiaries: "Individuals, families, businesses and organizations seeking assistance with legal disputes, court-related matters, claims or alternative dispute resolution.",
+    situations: "Civil or criminal proceedings, family and property disputes, banking and consumer matters, corporate disputes, fraud-related concerns and compensation claims.",
+    scope: "Legal notices, petitions, appeals, documentation and dispute-resolution assistance, including mediation, conciliation and arbitration, with court representation through duly authorized advocates where applicable.",
   },
   {
     slug: "legal-aid-social-justice-legal-awareness",
@@ -85,9 +85,9 @@ export const services: Service[] = [
       "Consumer-rights awareness",
       "Connecting people with suitable advocates and legal-aid organizations",
     ],
-    beneficiaries: "",
-    situations: [],
-    scope: "",
+    beneficiaries: "Individuals and communities seeking access to legal information, legal-aid guidance, rights awareness or support in navigating public and administrative processes.",
+    situations: "Concerns involving legal rights, police or administrative complaints, RTI applications, labour matters, social-security schemes and cyber-safety awareness.",
+    scope: "Guidance on available legal-aid mechanisms, rights and government processes, together with legal-awareness initiatives and assistance in connecting people with suitable advocates or legal-aid organizations.",
   },
   {
     slug: "corporate-government-professional-support",
@@ -122,9 +122,9 @@ export const services: Service[] = [
       "Banking documentation",
       "Loan-application support",
     ],
-    beneficiaries: "",
-    situations: [],
-    scope: "Statutory audits, certified accounting or other reserved professional work is carried out through qualified and authorized CAs, CSs or other professionals.",
+    beneficiaries: "Companies, LLPs, firms, institutions, government departments, trusts, societies and other organizations requiring structured documentation or administrative support.",
+    situations: "Contract and compliance requirements, government applications, tenders, HR documentation, banking processes, record management and preparation for professional audits or reviews.",
+    scope: "Assistance with contracts, MoUs, compliance records, applications, tenders, HR systems, internal controls and banking documentation, with reserved professional services coordinated through appropriately qualified professionals.",
   },
   {
     slug: "business-startup-ngo-digital-solutions",
@@ -171,9 +171,9 @@ export const services: Service[] = [
       "Operational improvement",
       "Institutional/project support for education, healthcare and social-sector ventures",
     ],
-    beneficiaries: "",
-    situations: [],
-    scope: "",
+    beneficiaries: "Entrepreneurs, startups, MSMEs, companies, NGOs, trusts, societies and organizations looking to establish, formalize, strengthen or digitally expand their operations.",
+    situations: "Business formation, registrations, government schemes, financing documentation, branding, website requirements, digital transformation or operational improvement.",
+    scope: "Business and entity formation assistance, planning, registrations, government-scheme guidance, financing documentation, digital presence, branding, intellectual-property coordination and business-management support.",
   },
   {
     slug: "online-legal-services-e-governance-consultancy",
@@ -213,9 +213,9 @@ export const services: Service[] = [
       "Government digital-service assistance",
       "Digital record management",
     ],
-    beneficiaries: "",
-    situations: [],
-    scope: "",
+    beneficiaries: "Individuals, businesses and organizations seeking convenient access to legal consultation, digital assistance, government portals or online professional services.",
+    situations: "Remote consultations, online documentation, e-filing assistance, cyber-fraud reporting, government digital services, legal research or case-information requirements.",
+    scope: "Online consultations, drafting assistance, e-filing guidance, digital document management, legal research, e-governance assistance, online awareness programs and selected consultancy services through an integrated digital platform.",
   },
 ];
 
