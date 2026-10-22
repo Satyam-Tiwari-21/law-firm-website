@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { cn } from "@/lib/utils";
-import { leaders, mission, vision } from "@/lib/site";
+import { leaders, mission, vision, type AdvocateProfile } from "@/lib/site";
 
 export function SectionHeading({ eyebrow, title, intro, tone = "light", center }: { eyebrow: string; title: string; intro?: string; tone?: "light" | "dark"; center?: boolean }) {
   return (
@@ -85,8 +85,14 @@ export function LeadershipCards() {
         {leaders.map((l, i) => (
           <Reveal key={l.name} delay={i * 120} className="group flex flex-col border border-border bg-card shadow-elegant sm:flex-row">
             <div className="relative grid aspect-[4/5] place-items-center bg-navy sm:w-56 sm:shrink-0">
-              <span className="font-serif text-6xl text-gold">{l.initials}</span>
-              <span className="absolute bottom-3 left-3 right-3 text-center text-[0.6rem] uppercase tracking-[0.2em] text-navy-muted">Photograph to be supplied</span>
+              {l.image ? (
+                <img src={l.image} alt={`${l.name}, ${l.role}`} className="h-full w-full object-cover" />
+              ) : (
+                <>
+                  <span className="font-serif text-6xl text-gold">{l.initials}</span>
+                  <span className="absolute bottom-3 left-3 right-3 text-center text-[0.6rem] uppercase tracking-[0.2em] text-navy-muted">Photograph to be supplied</span>
+                </>
+              )}
             </div>
             <div className="p-8">
               <p className="eyebrow">{l.role}</p>
@@ -101,5 +107,30 @@ export function LeadershipCards() {
         <GoldButton to="/advocates">More Profiles</GoldButton>
       </div>
     </>
+  );
+}
+
+export function AdvocateCard({ advocate }: { advocate: AdvocateProfile }) {
+  return (
+    <Reveal className="group flex flex-col border border-border bg-card shadow-elegant">
+      <Link to={`/advocates/${advocate.slug}`}>
+        <div className="relative grid aspect-[4/5] place-items-center bg-navy">
+          {advocate.image ? (
+            <img src={advocate.image} alt={`${advocate.name}, ${advocate.role}`} className="h-full w-full object-cover" />
+          ) : (
+            <>
+              <span className="font-serif text-6xl text-gold">{advocate.initials}</span>
+              <span className="absolute bottom-3 left-3 right-3 text-center text-[0.6rem] uppercase tracking-[0.2em] text-navy-muted">Photograph to be supplied</span>
+            </>
+          )}
+        </div>
+        <div className="p-8">
+          <p className="eyebrow">{advocate.role}</p>
+          <h3 className="mt-3 text-3xl text-navy">{advocate.name}</h3>
+          <span className="gold-rule mt-5 w-10" />
+          <p className="mt-5 leading-relaxed text-muted-foreground">{advocate.shortBio}</p>
+        </div>
+      </Link>
+    </Reveal>
   );
 }
