@@ -42,7 +42,7 @@ function Services() {
               </div>
               <div>
                 <h3 className="eyebrow">Common situations</h3>
-                <ul className="mt-4 space-y-2 text-sm text-muted-foreground">{s.situations.map((x) => <li key={x}>— {x}</li>)}</ul>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{s.situations}</p>
               </div>
               <div className="border-l-2 border-gold pl-5 sm:col-span-2">
                 <h3 className="eyebrow">Scope of support</h3>
