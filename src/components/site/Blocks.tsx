@@ -107,6 +107,35 @@ export function LeadershipCards() {
   );
 }
 
+export function AdvocateCard({ advocate }: { advocate: AdvocateProfile }) {
+  return (
+    <Reveal className="h-full">
+      <Link
+        to={`/advocates/${advocate.slug}`}
+        className="group flex h-full flex-col border border-border bg-card shadow-elegant"
+      >
+        <div className="relative grid aspect-[4/5] place-items-center bg-navy sm:shrink-0">
+          {advocate.image ? (
+            <img
+              src={advocate.image}
+              alt={`${advocate.name}, ${advocate.role}`}
+              className="h-full w-full object-cover"
+            />
+          ) : (
+            <span className="font-serif text-6xl text-gold">{advocate.initials}</span>
+          )}
+        </div>
+        <div className="flex flex-1 flex-col p-8">
+          <p className="eyebrow">{advocate.role}</p>
+          <h3 className="mt-3 text-3xl text-navy">{advocate.name}</h3>
+          <span className="gold-rule mt-5 w-10" />
+          <p className="mt-5 leading-relaxed text-muted-foreground">{advocate.shortBio}</p>
+        </div>
+      </Link>
+    </Reveal>
+  );
+}
+
 export function FeaturedAdvocate() {
   const coCounsel = advocates.find((a) => a.slug === "co-counsel");
 
