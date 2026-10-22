@@ -20,6 +20,7 @@ import { Route as LeadershipRouteImport } from './routes/leadership'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as AdvocatesSlugRouteImport } from './routes/advocates.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -76,11 +77,16 @@ const TermsRoute = TermsRouteImport.update({
   path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdvocatesSlugRoute = AdvocatesSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => AdvocatesRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/advocates': typeof AdvocatesRoute
+  '/advocates': typeof AdvocatesRouteWithChildren
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/industries': typeof IndustriesRoute
@@ -89,11 +95,12 @@ export interface FileRoutesByFullPath {
   '/privacy': typeof PrivacyRoute
   '/services': typeof ServicesRoute
   '/terms': typeof TermsRoute
+  '/advocates/$slug': typeof AdvocatesSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/advocates': typeof AdvocatesRoute
+  '/advocates': typeof AdvocatesRouteWithChildren
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/industries': typeof IndustriesRoute
@@ -102,12 +109,13 @@ export interface FileRoutesByTo {
   '/privacy': typeof PrivacyRoute
   '/services': typeof ServicesRoute
   '/terms': typeof TermsRoute
+  '/advocates/$slug': typeof AdvocatesSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/advocates': typeof AdvocatesRoute
+  '/advocates': typeof AdvocatesRouteWithChildren
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/industries': typeof IndustriesRoute
@@ -116,6 +124,7 @@ export interface FileRoutesById {
   '/privacy': typeof PrivacyRoute
   '/services': typeof ServicesRoute
   '/terms': typeof TermsRoute
+  '/advocates/$slug': typeof AdvocatesSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -131,6 +140,7 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/services'
     | '/terms'
+    | '/advocates/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -144,6 +154,7 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/services'
     | '/terms'
+    | '/advocates/$slug'
   id:
     | '__root__'
     | '/'
@@ -157,12 +168,13 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/services'
     | '/terms'
+    | '/advocates/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  AdvocatesRoute: typeof AdvocatesRoute
+  AdvocatesRoute: typeof AdvocatesRouteWithChildren
   ContactRoute: typeof ContactRoute
   DisclaimerRoute: typeof DisclaimerRoute
   IndustriesRoute: typeof IndustriesRoute
@@ -252,13 +264,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/advocates/$slug': {
+      id: '/advocates/$slug'
+      path: '/$slug'
+      fullPath: '/advocates/$slug'
+      preLoaderRoute: typeof AdvocatesSlugRouteImport
+      parentRoute: typeof AdvocatesRoute
+    }
   }
 }
+
+interface AdvocatesRouteChildren {
+  AdvocatesSlugRoute: typeof AdvocatesSlugRoute
+}
+
+const AdvocatesRouteChildren: AdvocatesRouteChildren = {
+  AdvocatesSlugRoute: AdvocatesSlugRoute,
+}
+
+const AdvocatesRouteWithChildren = AdvocatesRoute._addFileChildren(
+  AdvocatesRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
-  AdvocatesRoute: AdvocatesRoute,
+  AdvocatesRoute: AdvocatesRouteWithChildren,
   ContactRoute: ContactRoute,
   DisclaimerRoute: DisclaimerRoute,
   IndustriesRoute: IndustriesRoute,
