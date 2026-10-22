@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { seo, advocates } from "@/lib/site";
 import { PageHero, AdvocateCard } from "@/components/site/Blocks";
-import { GoldButton, Reveal } from "@/components/site/Ui";
+import { GoldButton } from "@/components/site/Blocks";
+import { Reveal } from "@/components/site/Reveal";
 
 // Find the Co-Counsel profile from the central data source
 const coCounsel = advocates.find((a) => a.slug === "co-counsel");
