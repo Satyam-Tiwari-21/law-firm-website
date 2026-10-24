@@ -31,24 +31,11 @@ export function Header() {
           <Logo />
           <nav className="hidden items-center gap-7 xl:flex" aria-label="Primary">
             {navLinks.map((l) => (
-              l.to === "/insights" ? (
-                <div key={l.to} className="relative group">
-                  <Link to={l.to} activeOptions={{ exact: true }} className="text-[0.82rem] text-navy-foreground/80 transition-colors hover:text-champagne" activeProps={{ className: "!text-gold" }}>
-                    {l.label}
-                  </Link>
-                  <div className="absolute top-full left-0 hidden group-hover:block bg-navy border border-gold/30 rounded-sm shadow-lg">
-                    <Link to="/insights/recent-judgments" className="block px-4 py-2 text-[0.82rem] text-navy-foreground/80 transition-colors hover:text-champagne">
-                      Recent Judgments
-                    </Link>
-                  </div>
-                </div>
-              ) : (
               <Link key={l.to} to={l.to} activeOptions={{ exact: l.to === "/" }}
                 className="text-[0.82rem] text-navy-foreground/80 transition-colors hover:text-champagne"
                 activeProps={{ className: "!text-gold" }}>
                 {l.label}
               </Link>
-              )
             ))}
           </nav>
           <div className="flex items-center gap-3">
