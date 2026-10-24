@@ -1,48 +1,55 @@
 import { legalJudgments, LegalJudgment } from "@/lib/legalJudgments";
 import { cn } from "@/lib/utils";
 import { useEffect, useState, useRef } from "react";
-import { Play, Pause } from "lucide-react";
+import { Play, Pause, ChevronLeft, ChevronRight } from "lucide-react";
 
 export function JudgmentCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-  const startTimer = () => {
-    timerRef.current = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % legalJudgments.length);
-    }, 3000);
-  };
-
-  const resetTimer = () => {
+  const stopTimer = () => {
     if (timerRef.current) {
       clearInterval(timerRef.current);
+      timerRef.current = null;
     }
-    startTimer();
+  };
+
+  const startTimer = () => {
+    stopTimer();
+    if (!isPaused) {
+      timerRef.current = setInterval(() => {
+        setActiveIndex((prevIndex) => (prevIndex + 1) % legalJudgments.length);
+      }, 3000);
+    }
   };
 
   useEffect(() => {
-    if (!isPaused) {
-      startTimer();
-    }
+    startTimer();
+    return stopTimer;
+  }, [isPaused, activeIndex]);
 
-    return () => {
-      if (timerRef.current) {
-        clearInterval(timerRef.current);
-      }
-    };
-  }, [isPaused]);
+  const handleNavigation = (newIndex: number) => {
+    setActiveIndex(newIndex);
+  };
+
+  const handlePrevious = () => {
+    const newIndex = (activeIndex - 1 + legalJudgments.length) % legalJudgments.length;
+    handleNavigation(newIndex);
+  };
+
+  const handleNext = () => {
+    const newIndex = (activeIndex + 1) % legalJudgments.length;
+    handleNavigation(newIndex);
+  };
 
   const handleIndicatorClick = (index: number) => {
-    setActiveIndex(index);
-    resetTimer();
+    handleNavigation(index);
   };
 
   const togglePause = () => {
-    setIsPaused(!isPaused);
+    setIsPaused(prev => !prev);
   };
-
-  const currentJudgment = legalJudgments[activeIndex];
 
   return (
     <section className="bg-ivory py-20 md:py-28">
@@ -55,18 +62,16 @@ export function JudgmentCarousel() {
         </div>
 
         <div className="mt-16">
-          <div className="relative">
-            <div className="overflow-hidden">
-              <div
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-              >
-                {legalJudgments.map((judgment) => (
-                  <div key={judgment.id} className="w-full flex-shrink-0">
-                    <JudgmentCard judgment={judgment} />
-                  </div>
-                ))}
-              </div>
+          <div className="relative overflow-hidden">
+            <div
+              className="flex transition-transform duration-500 ease-in-out @media (prefers-reduced-motion:reduce):duration-0"
+              style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+            >
+              {legalJudgments.map((judgment) => (
+                <div key={judgment.id} className="w-full flex-shrink-0 p-1">
+                  <JudgmentCard judgment={judgment} />
+                </div>
+              ))}
             </div>
           </div>
 
@@ -76,18 +81,40 @@ export function JudgmentCarousel() {
                 key={index}
                 onClick={() => handleIndicatorClick(index)}
                 className={cn(
-                  "h-2 w-2 rounded-full",
-                  activeIndex === index ? "bg-gold" : "bg-gray-300"
+                  "h-2 w-2 rounded-full transition-colors",
+                  activeIndex === index ? "bg-gold" : "bg-gray-300 hover:bg-gray-400"
                 )}
                 aria-label={`Go to judgment ${index + 1}`}
+                aria-current={activeIndex === index}
               />
             ))}
           </div>
 
-          <div className="mt-4 flex justify-center">
-            <button onClick={togglePause} className="flex items-center space-x-2 text-sm font-semibold text-navy">
-              {isPaused ? <Play size={16} /> : <Pause size={16} />}
-              <span>{isPaused ? "Play" : "Pause"}</span>
+          <div className="mt-8 flex items-center justify-center space-x-4 md:space-x-8">
+            <button
+              onClick={handlePrevious}
+              className="flex items-center space-x-2 text-sm font-semibold text-navy hover:text-gold transition-colors"
+              aria-label="Previous judgment"
+            >
+              <ChevronLeft size={16} />
+              <span>Previous</span>
+            </button>
+
+            <button
+              onClick={togglePause}
+              className="flex items-center space-x-2 text-sm font-semibold text-navy hover:text-gold transition-colors"
+              aria-label={isPaused ? "Play automatic rotation" : "Pause automatic rotation"}
+            >
+              {isPaused ? <Play size={20} /> : <Pause size={20} />}
+            </button>
+
+            <button
+              onClick={handleNext}
+              className="flex items-center space-x-2 text-sm font-semibold text-navy hover:text-gold transition-colors"
+              aria-label="Next judgment"
+            >
+              <span>Next</span>
+              <ChevronRight size={16} />
             </button>
           </div>
         </div>
