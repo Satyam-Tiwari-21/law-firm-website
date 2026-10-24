@@ -287,14 +287,15 @@ export const advocates: AdvocateProfile[] = [
     experience: "Practicing in the District and Sessions Court, Sawai Madhopur, with experience in handling family disputes and matrimonial matters. Provides legal counselling and client guidance in sensitive legal matters. Known for maintaining composure under pressure, a strong sense of responsibility and ethics, and an empathetic approach toward clients. Associated with the International Human Rights Security Foundation."
   },
   {
-    slug: "associate-advocate-1",
-    name: "Associate Advocate 1",
+    slug: "vikas-brar",
+    name: "Vikas Brar",
     role: "Associate Advocate",
-    initials: "A1",
-    shortBio: "Dedicated associate advocate with a focus on [specialty area].",
-    biography: "[Full, detailed professional biography for Associate Advocate 1 to be provided here.]",
-    qualifications: ["LL.B."],
-    practiceAreas: ["[Practice Area 1]", "[Practice Area 2]"],
+    initials: "VB",
+    image: "/vikas-brar.jpg",
+    shortBio: "Associate Advocate providing professional legal support and assistance across client matters.",
+    biography: "Associate Advocate providing professional legal support and assistance across client matters.",
+    qualifications: [],
+    practiceAreas: [],
   },
   {
     slug: "associate-advocate-2",
