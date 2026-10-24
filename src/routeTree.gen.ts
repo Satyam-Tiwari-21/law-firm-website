@@ -21,6 +21,8 @@ import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as AdvocatesCoCounselRouteImport } from './routes/advocates/co-counsel'
+import { Route as InsightsRecentJudgmentsRouteImport } from './routes/insights.recent-judgments'
+import { Route as InsightsRecentJudgmentsSlugRouteImport } from './routes/insights.recent-judgments.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -82,6 +84,17 @@ const AdvocatesCoCounselRoute = AdvocatesCoCounselRouteImport.update({
   path: '/co-counsel',
   getParentRoute: () => AdvocatesRoute,
 } as any)
+const InsightsRecentJudgmentsRoute = InsightsRecentJudgmentsRouteImport.update({
+  id: '/recent-judgments',
+  path: '/recent-judgments',
+  getParentRoute: () => InsightsRoute,
+} as any)
+const InsightsRecentJudgmentsSlugRoute =
+  InsightsRecentJudgmentsSlugRouteImport.update({
+    id: '/$slug',
+    path: '/$slug',
+    getParentRoute: () => InsightsRecentJudgmentsRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -90,12 +103,14 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/industries': typeof IndustriesRoute
-  '/insights': typeof InsightsRoute
+  '/insights': typeof InsightsRouteWithChildren
   '/leadership': typeof LeadershipRoute
   '/privacy': typeof PrivacyRoute
   '/services': typeof ServicesRoute
   '/terms': typeof TermsRoute
   '/advocates/co-counsel': typeof AdvocatesCoCounselRoute
+  '/insights/recent-judgments': typeof InsightsRecentJudgmentsRouteWithChildren
+  '/insights/recent-judgments/$slug': typeof InsightsRecentJudgmentsSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -104,12 +119,14 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/industries': typeof IndustriesRoute
-  '/insights': typeof InsightsRoute
+  '/insights': typeof InsightsRouteWithChildren
   '/leadership': typeof LeadershipRoute
   '/privacy': typeof PrivacyRoute
   '/services': typeof ServicesRoute
   '/terms': typeof TermsRoute
   '/advocates/co-counsel': typeof AdvocatesCoCounselRoute
+  '/insights/recent-judgments': typeof InsightsRecentJudgmentsRouteWithChildren
+  '/insights/recent-judgments/$slug': typeof InsightsRecentJudgmentsSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -119,12 +136,14 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/industries': typeof IndustriesRoute
-  '/insights': typeof InsightsRoute
+  '/insights': typeof InsightsRouteWithChildren
   '/leadership': typeof LeadershipRoute
   '/privacy': typeof PrivacyRoute
   '/services': typeof ServicesRoute
   '/terms': typeof TermsRoute
   '/advocates/co-counsel': typeof AdvocatesCoCounselRoute
+  '/insights/recent-judgments': typeof InsightsRecentJudgmentsRouteWithChildren
+  '/insights/recent-judgments/$slug': typeof InsightsRecentJudgmentsSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -141,6 +160,8 @@ export interface FileRouteTypes {
     | '/services'
     | '/terms'
     | '/advocates/co-counsel'
+    | '/insights/recent-judgments'
+    | '/insights/recent-judgments/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -155,6 +176,8 @@ export interface FileRouteTypes {
     | '/services'
     | '/terms'
     | '/advocates/co-counsel'
+    | '/insights/recent-judgments'
+    | '/insights/recent-judgments/$slug'
   id:
     | '__root__'
     | '/'
@@ -169,6 +192,8 @@ export interface FileRouteTypes {
     | '/services'
     | '/terms'
     | '/advocates/co-counsel'
+    | '/insights/recent-judgments'
+    | '/insights/recent-judgments/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -178,7 +203,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DisclaimerRoute: typeof DisclaimerRoute
   IndustriesRoute: typeof IndustriesRoute
-  InsightsRoute: typeof InsightsRoute
+  InsightsRoute: typeof InsightsRouteWithChildren
   LeadershipRoute: typeof LeadershipRoute
   PrivacyRoute: typeof PrivacyRoute
   ServicesRoute: typeof ServicesRoute
@@ -271,6 +296,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdvocatesCoCounselRouteImport
       parentRoute: typeof AdvocatesRoute
     }
+    '/insights/recent-judgments': {
+      id: '/insights/recent-judgments'
+      path: '/recent-judgments'
+      fullPath: '/insights/recent-judgments'
+      preLoaderRoute: typeof InsightsRecentJudgmentsRouteImport
+      parentRoute: typeof InsightsRoute
+    }
+    '/insights/recent-judgments/$slug': {
+      id: '/insights/recent-judgments/$slug'
+      path: '/$slug'
+      fullPath: '/insights/recent-judgments/$slug'
+      preLoaderRoute: typeof InsightsRecentJudgmentsSlugRouteImport
+      parentRoute: typeof InsightsRecentJudgmentsRoute
+    }
   }
 }
 
@@ -286,6 +325,32 @@ const AdvocatesRouteWithChildren = AdvocatesRoute._addFileChildren(
   AdvocatesRouteChildren,
 )
 
+interface InsightsRecentJudgmentsRouteChildren {
+  InsightsRecentJudgmentsSlugRoute: typeof InsightsRecentJudgmentsSlugRoute
+}
+
+const InsightsRecentJudgmentsRouteChildren: InsightsRecentJudgmentsRouteChildren =
+  {
+    InsightsRecentJudgmentsSlugRoute: InsightsRecentJudgmentsSlugRoute,
+  }
+
+const InsightsRecentJudgmentsRouteWithChildren =
+  InsightsRecentJudgmentsRoute._addFileChildren(
+    InsightsRecentJudgmentsRouteChildren,
+  )
+
+interface InsightsRouteChildren {
+  InsightsRecentJudgmentsRoute: typeof InsightsRecentJudgmentsRouteWithChildren
+}
+
+const InsightsRouteChildren: InsightsRouteChildren = {
+  InsightsRecentJudgmentsRoute: InsightsRecentJudgmentsRouteWithChildren,
+}
+
+const InsightsRouteWithChildren = InsightsRoute._addFileChildren(
+  InsightsRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
@@ -293,7 +358,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DisclaimerRoute: DisclaimerRoute,
   IndustriesRoute: IndustriesRoute,
-  InsightsRoute: InsightsRoute,
+  InsightsRoute: InsightsRouteWithChildren,
   LeadershipRoute: LeadershipRoute,
   PrivacyRoute: PrivacyRoute,
   ServicesRoute: ServicesRoute,
