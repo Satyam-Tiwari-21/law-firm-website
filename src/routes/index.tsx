@@ -34,7 +34,7 @@ function Home() {
     <>
       {/* Hero */}
       <section className="relative min-h-[88vh] overflow-hidden">
-        <img src="/hero-justice.jpg" alt="Statue of Lady Justice" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover" />
+        <img src="/tingey-injury-law-firm-yCdPU73kGSc-unsplash.png" alt="Statue of Lady Justice" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-hero" />
         <div className="container-x relative flex min-h-[88vh] flex-col justify-center py-24">
           <p className="eyebrow animate-rise">Bridging People and Justice</p>
