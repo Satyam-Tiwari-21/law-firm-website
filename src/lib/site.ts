@@ -262,17 +262,29 @@ export type AdvocateProfile = {
 
 export const advocates: AdvocateProfile[] = [
   {
-    slug: "co-counsel",
-    name: "Co-Counsel",
+    slug: "preeti-meena",
+    name: "Preeti Meena",
     role: "Co-Counsel / Advocate",
-    initials: "CC",
-    shortBio: "Experienced advocate providing support across a range of legal matters.",
-    biography: "[Full, detailed professional biography for the Co-Counsel to be provided here. This section can describe their professional journey, key expertise, and approach to legal practice.]",
-    qualifications: ["LL.B.", "[Additional Qualification]"],
-    practiceAreas: ["General Civil & Criminal", "[Practice Area 2]"],
-    enrolment: "[Bar Council Enrolment Number (Placeholder)]",
-    experience: "[Years of Experience/Key Experience (Placeholder)]",
-    education: "[University/Institution (Placeholder)]",
+    initials: "PM",
+    image: "/preeti-meena.jpg",
+    shortBio: "Practicing advocate with professional experience in family disputes, matrimonial matters and legal counselling.",
+    biography: "Preeti Meena is a practicing advocate with professional experience in the District and Sessions Court, Sawai Madhopur. Her practice includes family disputes, matrimonial matters and legal counselling, with an emphasis on understanding clients' concerns and providing empathetic and professional guidance. With an academic background in Law, Human Rights and International Law, she brings legal knowledge, client understanding and a strong sense of professional responsibility to her practice.",
+    qualifications: [
+      "LL.M. — University of Rajasthan, 2010",
+      "LL.B. — University of Rajasthan, 2008",
+      "Graduation — University of Rajasthan, 2005",
+      "Master's Degree in Human Rights & International Law",
+      "Diploma in Travel & Tourism Management — RTDC",
+      "RS-CIT Computer Diploma — Vardhman Mahaveer Open University"
+    ],
+    practiceAreas: [
+      "Family Disputes",
+      "Matrimonial Matters",
+      "Legal Counselling",
+      "Human Rights & International Law",
+      "Client Advisory & Legal Guidance"
+    ],
+    experience: "Practicing in the District and Sessions Court, Sawai Madhopur, with experience in handling family disputes and matrimonial matters. Provides legal counselling and client guidance in sensitive legal matters. Known for maintaining composure under pressure, a strong sense of responsibility and ethics, and an empathetic approach toward clients. Associated with the International Human Rights Security Foundation."
   },
   {
     slug: "associate-advocate-1",
