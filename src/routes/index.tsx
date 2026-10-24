@@ -57,7 +57,7 @@ function Home() {
 
 
 
-      <FeaturedAdvocate />
+      
 
       {/* Services */}
       <section className="bg-background py-24 md:py-32">
