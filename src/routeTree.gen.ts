@@ -20,6 +20,7 @@ import { Route as LeadershipRouteImport } from './routes/leadership'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as AdvocatesSlugRouteImport } from './routes/advocates/$slug'
 import { Route as AdvocatesCoCounselRouteImport } from './routes/advocates/co-counsel'
 import { Route as InsightsRecentJudgmentsRouteImport } from './routes/insights.recent-judgments'
 import { Route as InsightsRecentJudgmentsSlugRouteImport } from './routes/insights.recent-judgments.$slug'
@@ -79,6 +80,11 @@ const TermsRoute = TermsRouteImport.update({
   path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdvocatesSlugRoute = AdvocatesSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => AdvocatesRoute,
+} as any)
 const AdvocatesCoCounselRoute = AdvocatesCoCounselRouteImport.update({
   id: '/co-counsel',
   path: '/co-counsel',
@@ -108,6 +114,7 @@ export interface FileRoutesByFullPath {
   '/privacy': typeof PrivacyRoute
   '/services': typeof ServicesRoute
   '/terms': typeof TermsRoute
+  '/advocates/$slug': typeof AdvocatesSlugRoute
   '/advocates/co-counsel': typeof AdvocatesCoCounselRoute
   '/insights/recent-judgments': typeof InsightsRecentJudgmentsRouteWithChildren
   '/insights/recent-judgments/$slug': typeof InsightsRecentJudgmentsSlugRoute
@@ -124,6 +131,7 @@ export interface FileRoutesByTo {
   '/privacy': typeof PrivacyRoute
   '/services': typeof ServicesRoute
   '/terms': typeof TermsRoute
+  '/advocates/$slug': typeof AdvocatesSlugRoute
   '/advocates/co-counsel': typeof AdvocatesCoCounselRoute
   '/insights/recent-judgments': typeof InsightsRecentJudgmentsRouteWithChildren
   '/insights/recent-judgments/$slug': typeof InsightsRecentJudgmentsSlugRoute
@@ -141,6 +149,7 @@ export interface FileRoutesById {
   '/privacy': typeof PrivacyRoute
   '/services': typeof ServicesRoute
   '/terms': typeof TermsRoute
+  '/advocates/$slug': typeof AdvocatesSlugRoute
   '/advocates/co-counsel': typeof AdvocatesCoCounselRoute
   '/insights/recent-judgments': typeof InsightsRecentJudgmentsRouteWithChildren
   '/insights/recent-judgments/$slug': typeof InsightsRecentJudgmentsSlugRoute
@@ -159,6 +168,7 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/services'
     | '/terms'
+    | '/advocates/$slug'
     | '/advocates/co-counsel'
     | '/insights/recent-judgments'
     | '/insights/recent-judgments/$slug'
@@ -175,6 +185,7 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/services'
     | '/terms'
+    | '/advocates/$slug'
     | '/advocates/co-counsel'
     | '/insights/recent-judgments'
     | '/insights/recent-judgments/$slug'
@@ -191,6 +202,7 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/services'
     | '/terms'
+    | '/advocates/$slug'
     | '/advocates/co-counsel'
     | '/insights/recent-judgments'
     | '/insights/recent-judgments/$slug'
@@ -289,6 +301,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/advocates/$slug': {
+      id: '/advocates/$slug'
+      path: '/$slug'
+      fullPath: '/advocates/$slug'
+      preLoaderRoute: typeof AdvocatesSlugRouteImport
+      parentRoute: typeof AdvocatesRoute
+    }
     '/advocates/co-counsel': {
       id: '/advocates/co-counsel'
       path: '/co-counsel'
@@ -314,10 +333,12 @@ declare module '@tanstack/react-router' {
 }
 
 interface AdvocatesRouteChildren {
+  AdvocatesSlugRoute: typeof AdvocatesSlugRoute
   AdvocatesCoCounselRoute: typeof AdvocatesCoCounselRoute
 }
 
 const AdvocatesRouteChildren: AdvocatesRouteChildren = {
+  AdvocatesSlugRoute: AdvocatesSlugRoute,
   AdvocatesCoCounselRoute: AdvocatesCoCounselRoute,
 }
 
