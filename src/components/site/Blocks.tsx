@@ -170,7 +170,7 @@ export function FeaturedAdvocate() {
               <span className="gold-rule mt-6 w-16" />
               <p className="mt-6 text-lg leading-relaxed text-muted-foreground">{coCounsel.shortBio}</p>
               <div className="mt-8">
-                <GoldButton to={`/advocates`}>View Profiles</GoldButton>
+                <GoldButton to={`/advocates/co-counsel`}>View Profile →</GoldButton>
               </div>
             </div>
           </div>
