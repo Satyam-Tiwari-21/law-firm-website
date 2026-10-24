@@ -5,7 +5,7 @@ import { GoldButton } from "@/components/site/Blocks";
 import { Reveal } from "@/components/site/Reveal";
 
 // Find the Co-Counsel profile from the central data source
-const coCounsel = advocates.find((a) => a.slug === "co-counsel");
+const coCounsel = advocates.find((a) => a.slug === "preeti-meena");
 // Find other advocates to feature in the "More Profiles" section
 const otherAdvocates = advocates.filter((a) => a.slug !== "preeti-meena").slice(0, 2);
 
