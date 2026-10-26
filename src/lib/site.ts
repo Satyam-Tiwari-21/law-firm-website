@@ -242,6 +242,7 @@ export const leaders = [
     name: "Bhagwat Ram Barar",
     role: "Director",
     initials: "BB",
+    image: "/bhagwat.png",
     bio: "Director of Justice Law Bridge Legal Services LLP.",
   },
 ];
@@ -292,7 +293,7 @@ export const advocates: AdvocateProfile[] = [
     name: "Vikash Brar",
     role: "Associate Advocate",
     initials: "VB",
-    image: "/vikas-brar.jpg",
+    image: "/vikash-brar.jpg",
     shortBio: "Associate Advocate providing professional legal support and assistance across client matters.",
     biography: "Associate Advocate providing professional legal support and assistance across client matters.",
     qualifications: [],
