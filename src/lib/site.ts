@@ -235,6 +235,7 @@ export const leaders = [
     name: "Vikash Barar",
     role: "Director",
     initials: "VB",
+    image: "/vikash-brar.jpg",
     bio: "Practising Advocate with LL.B., LL.M., and PhD degrees in Law. Leads the firm's legal practice, dispute resolution, and legal awareness work from Sawai Madhopur, Rajasthan.",
   },
   {
@@ -287,8 +288,8 @@ export const advocates: AdvocateProfile[] = [
     experience: "Practicing in the District and Sessions Court, Sawai Madhopur, with experience in handling family disputes and matrimonial matters. Provides legal counselling and client guidance in sensitive legal matters. Known for maintaining composure under pressure, a strong sense of responsibility and ethics, and an empathetic approach toward clients. Associated with the International Human Rights Security Foundation."
   },
   {
-    slug: "vikas-brar",
-    name: "Vikas Brar",
+    slug: "vikash-brar",
+    name: "Vikash Brar",
     role: "Associate Advocate",
     initials: "VB",
     image: "/vikas-brar.jpg",
