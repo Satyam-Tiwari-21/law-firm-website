@@ -291,13 +291,13 @@ export const advocates: AdvocateProfile[] = [
   {
     slug: "vikash-brar",
     name: "Vikash Brar",
-    role: "Associate Advocate",
+    role: "Director & Advocate",
     initials: "VB",
     image: "/vikash-brar.jpg",
-    shortBio: "Associate Advocate providing professional legal support and assistance across client matters.",
-    biography: "Associate Advocate providing professional legal support and assistance across client matters.",
-    qualifications: [],
-    practiceAreas: [],
+    shortBio: "A practicing advocate with a focus on dispute resolution and client representation, holding BCA, MCA, LL.B., and LL.M. degrees, and currently pursuing a Ph.D. in Law.",
+    biography: "As a Director of the firm and a practicing advocate, Vikash Brar brings a wealth of academic knowledge and practical experience. He is actively involved in legal practice at the Rajasthan High Court, Jaipur Bench, and the Sessions Court in Sawai Madhopur. His work is centered on effective dispute resolution, dedicated client representation, and promoting legal awareness. With qualifications including BCA, MCA, LL.B., and LL.M., and a Ph.D. in Law in progress, he is committed to both the practice and the advancement of legal scholarship.",
+    qualifications: ["Ph.D. in Law (Pursuing)", "LL.M.", "LL.B.", "MCA", "BCA"],
+    practiceAreas: ["Dispute Resolution", "Client Representation", "Legal Awareness"],
   },
   {
     slug: "associate-advocate-2",
