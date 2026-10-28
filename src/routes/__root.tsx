@@ -127,6 +127,7 @@ function RootComponent() {
         <Outlet />
       </main>
       <Footer />
+      <DisclaimerModal />
     </QueryClientProvider>
   );
 }
