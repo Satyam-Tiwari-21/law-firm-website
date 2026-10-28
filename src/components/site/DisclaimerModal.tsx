@@ -1,15 +1,41 @@
-import { useState, useEffect } from "react";
-import { GoldButton } from "@/components/site/Blocks";
+import { useState, useEffect, type ReactNode } from "react";
+import { Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+// Self-contained GoldButton to avoid external dependencies causing SSR issues
+function GoldButton({ onClick, children }: { onClick: () => void; children: ReactNode }) {
+  return (
+    <button
+      onClick={onClick}
+      className={cn(
+        "group inline-flex items-center gap-3 bg-gold px-7 py-4 text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-navy transition-colors hover:bg-champagne",
+      )}
+    >
+      {children}
+      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+    </button>
+  );
+}
 
 export function DisclaimerModal() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    const isAcknowledged = sessionStorage.getItem("disclaimerAcknowledged");
-    if (!isAcknowledged) {
-      setIsOpen(true);
-    }
+    // This effect runs only on the client, safely setting the isClient flag
+    setIsClient(true);
   }, []);
+
+  useEffect(() => {
+    // This effect depends on isClient, ensuring sessionStorage is only accessed on the client
+    if (isClient) {
+      const isAcknowledged = sessionStorage.getItem("disclaimerAcknowledged");
+      if (!isAcknowledged) {
+        setIsOpen(true);
+      }
+    }
+  }, [isClient]);
 
   const handleAcknowledge = () => {
     sessionStorage.setItem("disclaimerAcknowledged", "true");
