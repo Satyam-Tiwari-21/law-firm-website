@@ -8,12 +8,16 @@ import {
   Scripts,
   type ErrorComponentProps,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, type ReactNode, lazy, Suspense } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+
+const DisclaimerModal = lazy(() =>
+  import("@/components/site/DisclaimerModal").then((m) => ({ default: m.DisclaimerModal }))
+);
 
 function NotFoundComponent() {
   return (
@@ -127,7 +131,9 @@ function RootComponent() {
         <Outlet />
       </main>
       <Footer />
-      <DisclaimerModal />
+      <Suspense fallback={null}>
+        <DisclaimerModal />
+      </Suspense>
     </QueryClientProvider>
   );
 }
