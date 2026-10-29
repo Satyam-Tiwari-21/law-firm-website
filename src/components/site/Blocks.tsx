@@ -129,7 +129,7 @@ export function AdvocateCard({ advocate }: { advocate: AdvocateProfile }) {
           <p className="eyebrow">{advocate.role}</p>
           <h3 className="mt-3 text-3xl text-navy">{advocate.name}</h3>
           <span className="gold-rule mt-5 w-10" />
-          <p className="mt-5 leading-relaxed text-muted-foreground">{advocate.shortBio}</p>
+          <p className="mt-5 leading-relaxed text-muted-foreground">{advocate.biography}</p>
         </div>
       </Link>
     </Reveal>
