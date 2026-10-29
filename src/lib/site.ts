@@ -300,6 +300,18 @@ export const advocates: AdvocateProfile[] = [
     practiceAreas: ["Dispute Resolution", "Client Representation", "Legal Awareness"],
   },
   {
+    slug: "ananth-shankar-sharma",
+    name: "Ananth Shankar Sharma",
+    role: "Co-Counsel / Advocate",
+    initials: "AS",
+    image: "/ananth.jpeg",
+    shortBio: "An experienced advocate practicing in the Supreme Court of India, known for his expertise in dispute resolution and litigation.",
+    biography: "Ananth Shankar Sharma is a seasoned advocate practicing primarily in the Supreme Court of India. He brings extensive experience in handling a wide range of legal matters, with a special focus on dispute resolution and litigation. His sharp legal acumen and dedication to his clients have earned him a reputation as a formidable presence in the courtroom. He is committed to upholding the principles of justice and providing the highest quality of legal representation.",
+    qualifications: ["LL.M.", "LL.B."],
+    practiceAreas: ["Dispute Resolution", "Litigation", "Constitutional Law", "Civil and Criminal Law"],
+    experience: "Practicing in the Supreme Court of India, with a focus on dispute resolution and litigation across various legal domains."
+  },
+  {
     slug: "associate-advocate-2",
     name: "Associate Advocate 2",
     role: "Associate Advocate",
