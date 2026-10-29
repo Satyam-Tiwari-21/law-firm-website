@@ -270,12 +270,12 @@ export const advocates: AdvocateProfile[] = [
     initials: "PM",
     image: "/preeti-meena.jpg",
     shortBio: "Practicing advocate with professional experience in family disputes, matrimonial matters and legal counselling.",
-    biography: "Preeti Meena is a practicing advocate with professional experience in the District and Sessions Court, Sawai Madhopur. Her practice includes family disputes, matrimonial matters and legal counselling, with an emphasis on understanding clients' concerns and providing empathetic and professional guidance. With an academic background in Law, Human Rights and International Law, she brings legal knowledge, client understanding and a strong sense of professional responsibility to her practice.",
+    biography: "Preeti Meena is a practicing advocate with professional experience in the District and Sessions Court, Sawai Madhopur. Her practice includes family disputes, matrimonial matters and legal counselling, with an emphasis on understanding clients'' concerns and providing empathetic and professional guidance. With an academic background in Law, Human Rights and International Law, she brings legal knowledge, client understanding and a strong sense of professional responsibility to her practice.",
     qualifications: [
       "LL.M. — University of Rajasthan, 2010",
       "LL.B. — University of Rajasthan, 2008",
       "Graduation — University of Rajasthan, 2005",
-      "Master's Degree in Human Rights & International Law",
+      "Master''s Degree in Human Rights & International Law",
       "Diploma in Travel & Tourism Management — RTDC",
       "RS-CIT Computer Diploma — Vardhman Mahaveer Open University"
     ],
