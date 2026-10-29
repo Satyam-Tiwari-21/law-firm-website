@@ -305,11 +305,11 @@ export const advocates: AdvocateProfile[] = [
     role: "Co-Counsel / Advocate",
     initials: "AS",
     image: "/ananth.jpeg",
-    shortBio: "An experienced advocate practicing in the Supreme Court of India, known for his expertise in dispute resolution and litigation.",
-    biography: "Ananth Shankar Sharma is a seasoned advocate practicing primarily in the Supreme Court of India. He brings extensive experience in handling a wide range of legal matters, with a special focus on dispute resolution and litigation. His sharp legal acumen and dedication to his clients have earned him a reputation as a formidable presence in the courtroom. He is committed to upholding the principles of justice and providing the highest quality of legal representation.",
+    shortBio: "Ananth Shankar Sharma is an advocate practising before the Rajasthan High Court, Jaipur.",
+    biography: "Ananth Shankar Sharma is an advocate practising before the Rajasthan High Court, Jaipur. His areas of practice include criminal law, civil disputes, revenue matters, and motor accident cases. He is committed to providing professional legal assistance and supporting clients in navigating legal matters with diligence and a clear understanding of their concerns",
     qualifications: ["LL.M.", "LL.B."],
-    practiceAreas: ["Dispute Resolution", "Litigation", "Constitutional Law", "Civil and Criminal Law"],
-    experience: "Practicing in the Supreme Court of India, with a focus on dispute resolution and litigation across various legal domains."
+    practiceAreas: ["Criminal Law", "Civil Disputes", "Revenue Matters", "Motor Accident Cases"],
+    experience: "Practicing in the Rajasthan High Court, Jaipur, with a focus on criminal law, civil disputes, revenue matters, and motor accident cases."
   },
   {
     slug: "associate-advocate-2",
