@@ -305,7 +305,7 @@ export const advocates: AdvocateProfile[] = [
     role: "Co-Counsel / Advocate",
     initials: "AS",
     image: "/ananth.jpeg",
-    shortBio: "Ananth Shankar Sharma is an advocate practising before the Rajasthan High Court, Jaipur.",
+    shortBio: "Ananth Shankar Sharma is an advocate practising before the Rajasthan High Court, Jaipur. His areas of practice include criminal law, civil disputes, revenue matters, and motor accident cases. He is committed to providing professional legal assistance and supporting clients in navigating legal matters with diligence and a clear understanding of their concerns",
     biography: "Ananth Shankar Sharma is an advocate practising before the Rajasthan High Court, Jaipur. His areas of practice include criminal law, civil disputes, revenue matters, and motor accident cases. He is committed to providing professional legal assistance and supporting clients in navigating legal matters with diligence and a clear understanding of their concerns",
     qualifications: ["LL.M.", "LL.B."],
     practiceAreas: ["Criminal Law", "Civil Disputes", "Revenue Matters", "Motor Accident Cases"],
