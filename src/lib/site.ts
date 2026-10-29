@@ -235,7 +235,7 @@ export const leaders = [
     name: "Vikash Barar",
     role: "Director",
     initials: "VB",
-    image: "/vikash-brar.jpg",
+    image: "/vikash.jpeg",
     bio: "Vikash Brar is a practicing advocate and the Director of Justice Law Bridge Legal Services LLP. With a strong academic background—including BCA, MCA, LL.B., and LL.M. degrees, and currently pursuing a Ph.D. in Law—he brings a deep, multifaceted understanding to the legal field. His practice experience spans the Rajasthan High Court, Jaipur Bench, and the Sessions Court in Sawai Madhopur, where he focuses on effective dispute resolution and robust client representation.",
   },
   {
