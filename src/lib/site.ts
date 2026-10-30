@@ -312,14 +312,15 @@ export const advocates: AdvocateProfile[] = [
     experience: "Practicing in the Rajasthan High Court, Jaipur, with a focus on criminal law, civil disputes, revenue matters, and motor accident cases."
   },
   {
-    slug: "associate-advocate-2",
-    name: "Associate Advocate 2",
-    role: "Associate Advocate",
-    initials: "A2",
-    shortBio: "A skilled professional contributing to various legal cases and client matters.",
-    biography: "[Full, detailed professional biography for Associate Advocate 2 to be provided here.]",
-    qualifications: ["LL.B.", "B.A."],
-    practiceAreas: ["[Practice Area 3]"],
+    slug: "akshay-rai-goyal",
+    name: "Akshay Rai Goyal",
+    role: "Co-Counsel / Advocate",
+    initials: "AG",
+    image: "/akshay rai goyal.jpeg",
+    shortBio: "A legal professional specializing in corporate law, property matters, and regulatory compliance, with a background in finance and audit.",
+    biography: "Adv. Akshay Rai Goyal is a legal professional specializing in Corporate & Company Law, Property Matters, Legal Drafting, and Regulatory Compliance. With extensive experience in finance, accounting, and auditing, he brings a multidisciplinary perspective to legal and corporate matters. He is also pursuing Company Secretary (CS) Professional qualifications, strengthening his expertise in corporate governance and compliance.",
+    qualifications: ["LL.B.", "B.A.", "CS (Professional) Pursuing"],
+    practiceAreas: ["Corporate & Company Law", "Property Matters", "Legal Drafting", "Regulatory Compliance"],
   },
 ];
 
