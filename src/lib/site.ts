@@ -316,11 +316,23 @@ export const advocates: AdvocateProfile[] = [
     name: "Akshay Rai Goyal",
     role: "Co-Counsel / Advocate",
     initials: "AG",
-    image: "/akshay rai goyal.jpeg",
+    image: "/akshay-rai-goyal.jpeg",
     shortBio: "A legal professional specializing in corporate law, property matters, and regulatory compliance, with a background in finance and audit.",
     biography: "Adv. Akshay Rai Goyal is a legal professional specializing in Corporate & Company Law, Property Matters, Legal Drafting, and Regulatory Compliance. With extensive experience in finance, accounting, and auditing, he brings a multidisciplinary perspective to legal and corporate matters. He is also pursuing Company Secretary (CS) Professional qualifications, strengthening his expertise in corporate governance and compliance.",
     qualifications: ["LL.B.", "B.A.", "CS (Professional) Pursuing"],
     practiceAreas: ["Corporate & Company Law", "Property Matters", "Legal Drafting", "Regulatory Compliance"],
+  },
+  {
+    slug: "abhay-kumar-gupta",
+    name: "Advocate Abhay Kumar Gupta",
+    role: "Co-Counsel / Advocate",
+    initials: "AG",
+    image: "/abhay-kumar-gupta.jpg",
+    shortBio: "Advocate Abhay Kumar Gupta is an experienced legal professional with over 25 years of practice since 1999. He specializes in civil, criminal, and revenue matters, with extensive experience representing clients before District and Sessions Courts, other subordinate courts, and District Collectorate proceedings. He holds an M.A. and LL.B., bringing substantial legal expertise and practical courtroom experience.",
+    biography: "Advocate Abhay Kumar Gupta is an experienced legal professional with over 25 years of practice since 1999. He specializes in civil, criminal, and revenue matters, with extensive experience representing clients before District and Sessions Courts, other subordinate courts, and District Collectorate proceedings. He holds an M.A. and LL.B., bringing substantial legal expertise and practical courtroom experience.",
+    qualifications: ["M.A.", "LL.B."],
+    practiceAreas: ["Civil Matters", "Criminal Matters", "Revenue Matters"],
+    experience: "Practicing since 1999 in District and Sessions Courts, other subordinate courts, and District Collectorate proceedings."
   },
 ];
 
