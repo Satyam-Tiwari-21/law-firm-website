@@ -3,7 +3,7 @@ import { advocates } from "@/lib/site";
 import { Reveal } from "@/components/site/Reveal";
 import { GoldButton } from "@/components/site/Blocks";
 
-const featuredAdvocate = advocates.find((a) => a.slug === "preeti-meena");
+const featuredAdvocate = advocates.find((a) => a.slug === "abhay-kumar-gupta");
 
 export function FeaturedAdvocate() {
   if (!featuredAdvocate) return null;
