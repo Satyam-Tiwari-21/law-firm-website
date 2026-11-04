@@ -269,7 +269,13 @@ export type OfficeStaffProfile = {
   initials: string;
 };
 
-export const officeStaff: OfficeStaffProfile[] = [];
+export const officeStaff: OfficeStaffProfile[] = [
+  {
+    name: "John Doe",
+    role: "Office Manager",
+    initials: "JD",
+  }
+];
 
 export const advocates: AdvocateProfile[] = [
   {
