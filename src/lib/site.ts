@@ -262,6 +262,15 @@ export type AdvocateProfile = {
   education?: string;
 };
 
+export type OfficeStaffProfile = {
+  name: string;
+  role: string;
+  image?: string;
+  initials: string;
+};
+
+export const officeStaff: OfficeStaffProfile[] = [];
+
 export const advocates: AdvocateProfile[] = [
   {
     slug: "abhay-kumar-gupta",
