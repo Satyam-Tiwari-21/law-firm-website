@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { cn } from "@/lib/utils";
-import { leaders, mission, vision, advocates, type AdvocateProfile } from "@/lib/site";
+import { leaders, mission, vision, advocates, type AdvocateProfile, officeStaff, OfficeStaffProfile } from "@/lib/site";
 
 export function SectionHeading({ eyebrow, title, intro, tone = "light", center }: { eyebrow: string; title: string; intro?: string; tone?: "light" | "dark"; center?: boolean }) {
   return (
@@ -106,6 +106,39 @@ export function LeadershipCards() {
     </>
   );
 }
+
+export function OfficeStaffCards() {
+  if (officeStaff.length === 0) return null;
+
+  return (
+    <>
+      <div className="mt-16">
+        <SectionHeading eyebrow="Our Team" title="Office Staff" center />
+      </div>
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-8">
+        {officeStaff.map((s, i) => (
+          <Reveal key={s.name} delay={i * 120} className="group flex flex-col border border-border bg-card shadow-elegant">
+            <div className="relative grid aspect-[4/5] place-items-center bg-navy">
+              {s.image ? (
+                <img src={s.image} alt={`${s.name}, ${s.role}`} className="h-full w-full object-cover" />
+              ) : (
+                <>
+                  <span className="font-serif text-6xl text-gold">{s.initials}</span>
+                  <span className="absolute bottom-3 left-3 right-3 text-center text-[0.6rem] uppercase tracking-[0.2em] text-navy-muted">Photograph to be supplied</span>
+                </>
+              )}
+            </div>
+            <div className="p-8 text-center">
+              <h3 className="mt-3 text-2xl text-navy">{s.name}</h3>
+              <p className="eyebrow mt-2">{s.role}</p>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+    </>
+  );
+}
+
 
 export function AdvocateCard({ advocate }: { advocate: AdvocateProfile }) {
   return (
