@@ -327,7 +327,7 @@ export const advocates: AdvocateProfile[] = [
     name: "Abhay Kumar Gupta",
     role: "Co-Counsel / Advocate",
     initials: "AG",
-    image: "/abhay.jpeg",
+    image: "/abhay.png",
     shortBio: "Advocate Abhay Kumar Gupta is an experienced legal professional with over 25 years of practice since 1999. He specializes in civil, criminal, and revenue matters, with extensive experience representing clients before District and Sessions Courts, other subordinate courts, and District Collectorate proceedings. He holds an M.A. and LL.B., bringing substantial legal expertise and practical courtroom experience.",
     biography: "Advocate Abhay Kumar Gupta is an experienced legal professional with over 25 years of practice since 1999. He specializes in civil, criminal, and revenue matters, with extensive experience representing clients before District and Sessions Courts, other subordinate courts, and District Collectorate proceedings. He holds an M.A. and LL.B., bringing substantial legal expertise and practical courtroom experience.",
     qualifications: ["M.A.", "LL.B."],
