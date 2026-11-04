@@ -243,7 +243,7 @@ export const leaders = [
     role: "Director",
     initials: "BB",
     image: "/bhagwat.png",
-    bio: "Director of Justice Law Bridge Legal Services LLP.",
+    bio: "Director of Justice Law Bridge Legal Services LLP and founder of Paras Holistics Health and wellness centere.",
   },
 ];
 
