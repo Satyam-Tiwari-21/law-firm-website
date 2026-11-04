@@ -264,6 +264,29 @@ export type AdvocateProfile = {
 
 export const advocates: AdvocateProfile[] = [
   {
+    slug: "abhay-kumar-gupta",
+    name: "Abhay Kumar Gupta",
+    role: "Co-Counsel / Advocate",
+    initials: "AG",
+    image: "/abhay.png",
+    shortBio: "Advocate Abhay Kumar Gupta is an experienced legal professional with over 25 years of practice since 1999. He specializes in civil, criminal, and revenue matters, with extensive experience representing clients before District and Sessions Courts, other subordinate courts, and District Collectorate proceedings. He holds an M.A. and LL.B., bringing substantial legal expertise and practical courtroom experience.",
+    biography: "Advocate Abhay Kumar Gupta is an experienced legal professional with over 25 years of practice since 1999. He specializes in civil, criminal, and revenue matters, with extensive experience representing clients before District and Sessions Courts, other subordinate courts, and District Collectorate proceedings. He holds an M.A. and LL.B., bringing substantial legal expertise and practical courtroom experience.",
+    qualifications: ["M.A.", "LL.B."],
+    practiceAreas: ["Civil Matters", "Criminal Matters", "Revenue Matters"],
+    experience: "Practicing since 1999 in District and Sessions Courts, other subordinate courts, and District Collectorate proceedings."
+  },
+  {
+    slug: "vikash-brar",
+    name: "Vikash Barar",
+    role: "Director & Advocate",
+    initials: "VB",
+    image: "/vikash.jpeg",
+    shortBio: "A practicing advocate with a focus on dispute resolution and client representation, holding BCA, MCA, LL.B., and LL.M. degrees, and currently pursuing a Ph.D. in Law.",
+    biography: "As a Director of the firm and a practicing advocate, Vikash Brar brings a wealth of academic knowledge and practical experience. He is actively involved in legal practice at the Rajasthan High Court, Jaipur Bench, and the Sessions Court in Sawai Madhopur. His work is centered on effective dispute resolution, dedicated client representation, and promoting legal awareness. With qualifications including BCA, MCA, LL.B., and LL.M., and a Ph.D. in Law in progress, he is committed to both the practice and the advancement of legal scholarship.",
+    qualifications: ["Ph.D. in Law (Pursuing)", "LL.M.", "LL.B.", "MCA", "BCA"],
+    practiceAreas: ["Dispute Resolution", "Client Representation", "Legal Awareness"],
+  },
+  {
     slug: "preeti-meena",
     name: "Preeti Meena",
     role: "Co-Counsel / Advocate",
@@ -289,15 +312,15 @@ export const advocates: AdvocateProfile[] = [
     experience: "Practicing in the District and Sessions Court, Sawai Madhopur, with experience in handling family disputes and matrimonial matters. Provides legal counselling and client guidance in sensitive legal matters. Known for maintaining composure under pressure, a strong sense of responsibility and ethics, and an empathetic approach toward clients. Associated with the International Human Rights Security Foundation."
   },
   {
-    slug: "vikash-brar",
-    name: "Vikash Barar",
-    role: "Director & Advocate",
-    initials: "VB",
-    image: "/vikash.jpeg",
-    shortBio: "A practicing advocate with a focus on dispute resolution and client representation, holding BCA, MCA, LL.B., and LL.M. degrees, and currently pursuing a Ph.D. in Law.",
-    biography: "As a Director of the firm and a practicing advocate, Vikash Brar brings a wealth of academic knowledge and practical experience. He is actively involved in legal practice at the Rajasthan High Court, Jaipur Bench, and the Sessions Court in Sawai Madhopur. His work is centered on effective dispute resolution, dedicated client representation, and promoting legal awareness. With qualifications including BCA, MCA, LL.B., and LL.M., and a Ph.D. in Law in progress, he is committed to both the practice and the advancement of legal scholarship.",
-    qualifications: ["Ph.D. in Law (Pursuing)", "LL.M.", "LL.B.", "MCA", "BCA"],
-    practiceAreas: ["Dispute Resolution", "Client Representation", "Legal Awareness"],
+    slug: "akshay-rai-goyal",
+    name: "Akshay Rai Goyal",
+    role: "Co-Counsel / Advocate",
+    initials: "AG",
+    image: "/akshay.jpeg",
+    shortBio: "A legal professional specializing in corporate law, property matters, and regulatory compliance, with a background in finance and audit.",
+    biography: "Adv. Akshay Rai Goyal is a legal professional specializing in Corporate & Company Law, Property Matters, Legal Drafting, and Regulatory Compliance. With extensive experience in finance, accounting, and auditing, he brings a multidisciplinary perspective to legal and corporate matters. He is also pursuing Company Secretary (CS) Professional qualifications, strengthening his expertise in corporate governance and compliance.",
+    qualifications: ["LL.B.", "B.A.", "CS (Professional) Pursuing"],
+    practiceAreas: ["Corporate & Company Law", "Property Matters", "Legal Drafting", "Regulatory Compliance"],
   },
   {
     slug: "ananth-shankar-sharma",
@@ -310,29 +333,6 @@ export const advocates: AdvocateProfile[] = [
     qualifications: ["LL.M.", "LL.B."],
     practiceAreas: ["Criminal Law", "Civil Disputes", "Revenue Matters", "Motor Accident Cases"],
     experience: "Practicing in the Rajasthan High Court, Jaipur, with a focus on criminal law, civil disputes, revenue matters, and motor accident cases."
-  },
-  {
-    slug: "akshay-rai-goyal",
-    name: "Akshay Rai Goyal",
-    role: "Co-Counsel / Advocate",
-    initials: "AG",
-    image: "/akshay.jpeg",
-    shortBio: "A legal professional specializing in corporate law, property matters, and regulatory compliance, with a background in finance and audit.",
-    biography: "Adv. Akshay Rai Goyal is a legal professional specializing in Corporate & Company Law, Property Matters, Legal Drafting, and Regulatory Compliance. With extensive experience in finance, accounting, and auditing, he brings a multidisciplinary perspective to legal and corporate matters. He is also pursuing Company Secretary (CS) Professional qualifications, strengthening his expertise in corporate governance and compliance.",
-    qualifications: ["LL.B.", "B.A.", "CS (Professional) Pursuing"],
-    practiceAreas: ["Corporate & Company Law", "Property Matters", "Legal Drafting", "Regulatory Compliance"],
-  },
-  {
-    slug: "abhay-kumar-gupta",
-    name: "Abhay Kumar Gupta",
-    role: "Co-Counsel / Advocate",
-    initials: "AG",
-    image: "/abhay.png",
-    shortBio: "Advocate Abhay Kumar Gupta is an experienced legal professional with over 25 years of practice since 1999. He specializes in civil, criminal, and revenue matters, with extensive experience representing clients before District and Sessions Courts, other subordinate courts, and District Collectorate proceedings. He holds an M.A. and LL.B., bringing substantial legal expertise and practical courtroom experience.",
-    biography: "Advocate Abhay Kumar Gupta is an experienced legal professional with over 25 years of practice since 1999. He specializes in civil, criminal, and revenue matters, with extensive experience representing clients before District and Sessions Courts, other subordinate courts, and District Collectorate proceedings. He holds an M.A. and LL.B., bringing substantial legal expertise and practical courtroom experience.",
-    qualifications: ["M.A.", "LL.B."],
-    practiceAreas: ["Civil Matters", "Criminal Matters", "Revenue Matters"],
-    experience: "Practicing since 1999 in District and Sessions Courts, other subordinate courts, and District Collectorate proceedings."
   },
 ];
 
