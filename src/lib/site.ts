@@ -291,17 +291,6 @@ export const advocates: AdvocateProfile[] = [
     experience: "Practicing since 1999 in District and Sessions Courts, other subordinate courts, and District Collectorate proceedings."
   },
   {
-    slug: "vikash-brar",
-    name: "Vikash Barar",
-    role: "Founder & Advocate",
-    initials: "VB",
-    image: "/vikash.jpeg",
-    shortBio: "A practicing advocate with a focus on dispute resolution and client representation, holding BCA, MCA, LL.B., and LL.M. degrees, and currently pursuing a Ph.D. in Law.",
-    biography: "As a Founder of the firm and a practicing advocate, Vikash Brar brings a wealth of academic knowledge and practical experience. He is actively involved in legal practice at the Rajasthan High Court, Jaipur Bench, and the Sessions Court in Sawai Madhopur. His work is centered on effective dispute resolution, dedicated client representation, and promoting legal awareness. With qualifications including BCA, MCA, LL.B., and LL.M., and a Ph.D. in Law in progress, he is committed to both the practice and the advancement of legal scholarship.",
-    qualifications: ["Ph.D. in Law (Pursuing)", "LL.M.", "LL.B.", "MCA", "BCA"],
-    practiceAreas: ["Dispute Resolution", "Client Representation", "Legal Awareness"],
-  },
-  {
     slug: "preeti-meena",
     name: "Preeti Meena",
     role: "Co-Counsel / Advocate",
@@ -325,6 +314,17 @@ export const advocates: AdvocateProfile[] = [
       "Client Advisory & Legal Guidance"
     ],
     experience: "Practicing in the District and Sessions Court, Sawai Madhopur, with experience in handling family disputes and matrimonial matters. Provides legal counselling and client guidance in sensitive legal matters. Known for maintaining composure under pressure, a strong sense of responsibility and ethics, and an empathetic approach toward clients. Associated with the International Human Rights Security Foundation."
+  },
+  {
+    slug: "vikash-brar",
+    name: "Vikash Barar",
+    role: "Founder & Advocate",
+    initials: "VB",
+    image: "/vikash.jpeg",
+    shortBio: "A practicing advocate with a focus on dispute resolution and client representation, holding BCA, MCA, LL.B., and LL.M. degrees, and currently pursuing a Ph.D. in Law.",
+    biography: "As a Founder of the firm and a practicing advocate, Vikash Brar brings a wealth of academic knowledge and practical experience. He is actively involved in legal practice at the Rajasthan High Court, Jaipur Bench, and the Sessions Court in Sawai Madhopur. His work is centered on effective dispute resolution, dedicated client representation, and promoting legal awareness. With qualifications including BCA, MCA, LL.B., and LL.M., and a Ph.D. in Law in progress, he is committed to both the practice and the advancement of legal scholarship.",
+    qualifications: ["Ph.D. in Law (Pursuing)", "LL.M.", "LL.B.", "MCA", "BCA"],
+    practiceAreas: ["Dispute Resolution", "Client Representation", "Legal Awareness"],
   },
   {
     slug: "akshay-rai-goyal",
