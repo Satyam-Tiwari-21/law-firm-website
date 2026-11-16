@@ -4,8 +4,8 @@ import { ArrowUpRight, Gavel, Landmark, LineChart, Check } from "lucide-react";
 import library from "@/assets/library.jpg";
 import { seo, services, segments } from "@/lib/site";
 import { Reveal } from "@/components/site/Reveal";
-import { CTASection, GoldButton, LeadershipCards, SectionHeading, VisionMission } from "@/components/site/Blocks";
-import { FeaturedAdvocate } from "@/components/site/FeaturedAdvocate";
+import { AdvocateGrid, CTASection, GoldButton, LeadershipCards, SectionHeading, VisionMission } from "@/components/site/Blocks";
+
 
 export const Route = createFileRoute("/")({
   head: () => seo(
@@ -56,7 +56,7 @@ function Home() {
         </div>
       </section>
 
-      <FeaturedAdvocate />
+      <AdvocateGrid />
 
       {/* Services */}
       <section className="bg-background py-24 md:py-32">
