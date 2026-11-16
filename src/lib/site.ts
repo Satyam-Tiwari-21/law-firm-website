@@ -242,7 +242,7 @@ export const leaders = [
     name: "Bhagwat Ram Barar",
     role: "Co-Founder",
     initials: "BB",
-    image: "/Bhagwat Ram Brar.png",
+    image: "/bhagwat-ram-brar.png",
     bio: "Co-Founder of Justice Law Bridge Legal Services LLP and founder of Paras Holistics Health and wellness centere.",
   },
 ];
