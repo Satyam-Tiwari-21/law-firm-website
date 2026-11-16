@@ -140,14 +140,34 @@ export function OfficeStaffCards() {
 }
 
 
+export function AdvocateGrid() {
+  return (
+    <section className="py-24 md:py-32">
+      <div className="container-x">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="eyebrow">CO-COUNSEL / ADVOCATES</p>
+          <h2 className="mt-4 text-4xl leading-[1.05] md:text-5xl text-navy">Our Co-Counsel Advocates</h2>
+          <span className="gold-rule mt-6 mx-auto" />
+          <p className="mt-6 text-base leading-relaxed md:text-lg text-muted-foreground">A team of experienced legal professionals bringing diverse expertise and a results-driven approach.</p>
+        </div>
+        <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
+          {advocates.map((advocate) => (
+            <AdvocateCard key={advocate.slug} advocate={advocate} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function AdvocateCard({ advocate }: { advocate: AdvocateProfile }) {
   return (
     <Reveal className="h-full">
       <Link
         to={`/advocates/${advocate.slug}`}
-        className="group flex h-full flex-col border border-border bg-card shadow-elegant"
+        className="group flex h-full flex-col border border-border bg-card shadow-elegant rounded-lg overflow-hidden"
       >
-        <div className="relative grid aspect-[4/5] place-items-center bg-navy sm:shrink-0">
+        <div className="relative aspect-[4/5] place-items-center bg-navy sm:shrink-0">
           {advocate.image ? (
             <img
               src={advocate.image}
@@ -158,11 +178,15 @@ export function AdvocateCard({ advocate }: { advocate: AdvocateProfile }) {
             <span className="font-serif text-6xl text-gold">{advocate.initials}</span>
           )}
         </div>
-        <div className="flex flex-1 flex-col p-8">
-          <p className="eyebrow">{advocate.role}</p>
-          <h3 className="mt-3 text-3xl text-navy">{advocate.name}</h3>
-          <span className="gold-rule mt-5 w-10" />
-          <p className="mt-5 leading-relaxed text-muted-foreground">{advocate.biography}</p>
+        <div className="flex flex-1 flex-col p-6 text-center">
+          <h3 className="mt-3 text-xl text-navy">{advocate.name}</h3>
+          <p className="eyebrow mt-2">{advocate.role}</p>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground flex-1">{advocate.shortBio}</p>
+          <div className="mt-4">
+            <span className="inline-block border border-gold text-gold px-4 py-2 text-xs font-semibold tracking-widest group-hover:bg-gold group-hover:text-navy transition-colors">
+              VIEW PROFILE →
+            </span>
+          </div>
         </div>
       </Link>
     </Reveal>
