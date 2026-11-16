@@ -233,17 +233,17 @@ export const segments: Segment[] = [
 export const leaders = [
   {
     name: "Vikash Barar",
-    role: "Director",
+    role: "Founder",
     initials: "VB",
     image: "/vikash.jpeg",
-    bio: "Vikash Brar is a practicing advocate and the Director of Justice Law Bridge Legal Services LLP. With a strong academic background—including BCA, MCA, LL.B., and LL.M. degrees, and currently pursuing a Ph.D. in Law—he brings a deep, multifaceted understanding to the legal field. His practice experience spans the Rajasthan High Court, Jaipur Bench, and the Sessions Court in Sawai Madhopur, where he focuses on effective dispute resolution and robust client representation.",
+    bio: "Vikash Brar is a practicing advocate and the Founder of Justice Law Bridge Legal Services LLP. With a strong academic background—including BCA, MCA, LL.B., and LL.M. degrees, and currently pursuing a Ph.D. in Law—he brings a deep, multifaceted understanding to the legal field. His practice experience spans the Rajasthan High Court, Jaipur Bench, and the Sessions Court in Sawai Madhopur, where he focuses on effective dispute resolution and robust client representation.",
   },
   {
     name: "Bhagwat Ram Barar",
-    role: "Director",
+    role: "Co-Founder",
     initials: "BB",
     image: "/bhagwat.png",
-    bio: "Director of Justice Law Bridge Legal Services LLP and founder of Paras Holistics Health and wellness centere.",
+    bio: "Co-Founder of Justice Law Bridge Legal Services LLP and founder of Paras Holistics Health and wellness centere.",
   },
 ];
 
@@ -293,11 +293,11 @@ export const advocates: AdvocateProfile[] = [
   {
     slug: "vikash-brar",
     name: "Vikash Barar",
-    role: "Director & Advocate",
+    role: "Founder & Advocate",
     initials: "VB",
     image: "/vikash.jpeg",
     shortBio: "A practicing advocate with a focus on dispute resolution and client representation, holding BCA, MCA, LL.B., and LL.M. degrees, and currently pursuing a Ph.D. in Law.",
-    biography: "As a Director of the firm and a practicing advocate, Vikash Brar brings a wealth of academic knowledge and practical experience. He is actively involved in legal practice at the Rajasthan High Court, Jaipur Bench, and the Sessions Court in Sawai Madhopur. His work is centered on effective dispute resolution, dedicated client representation, and promoting legal awareness. With qualifications including BCA, MCA, LL.B., and LL.M., and a Ph.D. in Law in progress, he is committed to both the practice and the advancement of legal scholarship.",
+    biography: "As a Founder of the firm and a practicing advocate, Vikash Brar brings a wealth of academic knowledge and practical experience. He is actively involved in legal practice at the Rajasthan High Court, Jaipur Bench, and the Sessions Court in Sawai Madhopur. His work is centered on effective dispute resolution, dedicated client representation, and promoting legal awareness. With qualifications including BCA, MCA, LL.B., and LL.M., and a Ph.D. in Law in progress, he is committed to both the practice and the advancement of legal scholarship.",
     qualifications: ["Ph.D. in Law (Pursuing)", "LL.M.", "LL.B.", "MCA", "BCA"],
     practiceAreas: ["Dispute Resolution", "Client Representation", "Legal Awareness"],
   },
