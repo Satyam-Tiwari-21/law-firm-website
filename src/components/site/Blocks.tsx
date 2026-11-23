@@ -16,10 +16,10 @@ export function SectionHeading({ eyebrow, title, intro, tone = "light", center }
   );
 }
 
-export function PageHero({ eyebrow, title, intro, image }: { eyebrow: string; title: string; intro: string; image: string }) {
+export function PageHero({ eyebrow, title, intro, image }: { eyebrow: string; title: string; intro: string; image?: string }) {
   return (
     <section className="relative overflow-hidden bg-navy">
-      <img src={image} alt="" width={1600} height={1000} className="absolute inset-0 h-full w-full object-cover opacity-60" />
+      {image && <img src={image} alt="" width={1600} height={1000} className="absolute inset-0 h-full w-full object-cover opacity-60" />}
       <div className="absolute inset-0 bg-hero" />
       <div className="container-x relative py-24 md:py-32">
         <p className="eyebrow animate-rise">{eyebrow}</p>
@@ -164,7 +164,8 @@ export function AdvocateCard({ advocate }: { advocate: AdvocateProfile }) {
   return (
     <Reveal className="h-full">
       <Link
-        to={`/advocates/${advocate.slug}`}
+        to="/advocates/$slug"
+        params={{ slug: advocate.slug }}
         className="group flex h-full flex-col border border-border bg-card shadow-elegant rounded-lg overflow-hidden"
       >
         <div className="relative aspect-[4/5] place-items-center bg-navy sm:shrink-0">
