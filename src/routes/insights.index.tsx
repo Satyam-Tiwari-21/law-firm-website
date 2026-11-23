@@ -5,7 +5,7 @@ import { seo } from "@/lib/site";
 import { Reveal } from "@/components/site/Reveal";
 import { CTASection, PageHero } from "@/components/site/Blocks";
 
-export const Route = createFileRoute("/insights")({
+export const Route = createFileRoute("/insights/")({
   head: () => seo("Insights & Awareness — Justice Law Bridge Legal Services LLP", "Guides and awareness resources on legal documentation, compliance, mediation, startup registration and GST basics."),
   component: Insights,
 });
