@@ -6,7 +6,8 @@ export function JudgmentCard({ judgment }: { judgment: Judgment }) {
   return (
     <Reveal>
       <Link
-        to={`/insights/recent-judgments/${judgment.slug}`}
+        to="/insights/recent-judgments/$slug"
+        params={{ slug: judgment.slug }}
         className="group flex h-full flex-col rounded-sm border border-border bg-card p-6 shadow-elegant transition-colors hover:bg-ivory"
       >
         <div className="flex-1">
