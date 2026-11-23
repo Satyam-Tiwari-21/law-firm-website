@@ -6,7 +6,7 @@ import { firm, navLinks, services } from "@/lib/site";
 export function Footer() {
   return (
     <footer className="bg-navy text-navy-muted">
-      <div className="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
+      <div className="container-x grid gap-10 py-12 sm:grid-cols-2 md:gap-12 md:py-16 lg:grid-cols-4">
         <div>
           <Logo />
           <p className="mt-5 text-sm leading-relaxed">
@@ -41,7 +41,7 @@ export function Footer() {
       <div className="border-t border-navy-foreground/10">
         <div className="container-x flex flex-col gap-4 py-6 text-xs md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} {firm.name}. All rights reserved.</p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
             <Link to="/privacy" className="hover:text-champagne">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-champagne">Terms of Use</Link>
             <Link to="/disclaimer" className="hover:text-champagne">Disclaimer</Link>

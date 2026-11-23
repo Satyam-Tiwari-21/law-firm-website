@@ -20,21 +20,21 @@ function Contact() {
   return (
     <>
       <PageHero image={hero} eyebrow="Contact & Consultation" title="Start With a Conversation." intro="Reach the office directly or share a few details about your requirement and our team will be in touch." />
-      <section id="consultation" className="scroll-mt-24 py-20 md:py-28">
-        <div className="container-x grid gap-14 lg:grid-cols-[1fr_1.4fr]">
+      <section id="consultation" className="scroll-mt-24 py-16 md:py-28">
+        <div className="container-x grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-14">
           <div>
             <p className="eyebrow">Our Office</p>
-            <h2 className="mt-4 text-4xl text-navy">Justice Law Bridge Legal Services LLP</h2>
+            <h2 className="mt-4 text-3xl leading-tight text-navy sm:text-4xl">Justice Law Bridge Legal Services LLP</h2>
             <span className="gold-rule mt-6" />
             <ul className="mt-10 space-y-6">
               {items.map((it) => {
-                const body = (<><it.icon className="mt-1 h-5 w-5 shrink-0 text-gold" /><span><span className="eyebrow block">{it.k}</span><span className="mt-1 block break-all text-lg text-navy">{it.v}</span></span></>);
+                const body = (<><it.icon className="mt-1 h-5 w-5 shrink-0 text-gold" /><span><span className="eyebrow block">{it.k}</span><span className="mt-1 block text-base text-navy wrap-anywhere sm:text-lg">{it.v}</span></span></>);
                 return <li key={it.k}>{it.href ? <a href={it.href} target={it.k === "WhatsApp" ? "_blank" : undefined} rel="noreferrer" className="flex gap-4 hover:opacity-80">{body}</a> : <div className="flex gap-4">{body}</div>}</li>;
               })}
             </ul>
             <p className="mt-10 border-l-2 border-gold bg-ivory p-5 text-sm text-muted-foreground">A map will be added once the precise office address is confirmed.</p>
           </div>
-          <div className="border border-border p-6 shadow-elegant md:p-10">
+          <div className="border border-border p-5 shadow-elegant sm:p-8 md:p-10">
             <h2 className="text-3xl text-navy">Request a Consultation</h2>
             <p className="mb-8 mt-2 text-sm text-muted-foreground">All fields are required.</p>
             <ConsultationForm />

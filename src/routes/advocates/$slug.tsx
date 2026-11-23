@@ -24,16 +24,16 @@ function AdvocateProfilePage() {
 
   return (
     <>
-      <section className="bg-navy py-24 sm:py-32">
+      <section className="bg-navy py-16 md:py-24 lg:py-32">
         <div className="container-x">
           <Reveal>
-            <div className="grid items-center gap-12 md:grid-cols-2">
-              <div className="relative aspect-[4/5] bg-navy-2">
+            <div className="grid items-center gap-8 sm:grid-cols-[2fr_3fr] md:gap-12 lg:grid-cols-2">
+              <div className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden bg-navy-2 sm:max-w-none">
                 {advocate.image ? (
                   <img
                     src={advocate.image}
                     alt={`${advocate.name}, ${advocate.role}`}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover object-top"
                   />
                 ) : (
                   <div className="grid h-full w-full place-items-center">
@@ -43,16 +43,16 @@ function AdvocateProfilePage() {
               </div>
               <div>
                 <p className="eyebrow text-gold">{advocate.role}</p>
-                <h1 className="mt-3 font-serif text-5xl text-navy-foreground md:text-6xl">{advocate.name}</h1>
-                <span className="gold-rule mt-8 w-20" />
-                <p className="mt-8 text-lg leading-relaxed text-navy-muted">{advocate.shortBio}</p>
+                <h1 className="mt-3 font-serif text-4xl leading-tight text-navy-foreground sm:text-5xl lg:text-6xl">{advocate.name}</h1>
+                <span className="gold-rule mt-6 w-20 md:mt-8" />
+                <p className="mt-6 text-base leading-relaxed text-navy-muted sm:text-lg md:mt-8">{advocate.shortBio}</p>
               </div>
             </div>
           </Reveal>
         </div>
       </section>
 
-      <section className="py-24 sm:py-32">
+      <section className="py-16 md:py-24 lg:py-32">
         <div className="container-x">
           <div className="prose prose-lg mx-auto">
             <h2>Professional Profile</h2>
@@ -90,10 +90,10 @@ function AdvocateProfilePage() {
         </div>
       </section>
 
-      <section className="bg-ivory py-24 sm:py-32">
+      <section className="bg-ivory py-16 md:py-24 lg:py-32">
         <div className="container-x">
-          <h2 className="text-center font-serif text-4xl text-navy">More Profiles</h2>
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
+          <h2 className="text-center font-serif text-3xl text-navy md:text-4xl">More Profiles</h2>
+          <div className="mx-auto mt-10 grid max-w-3xl grid-cols-2 gap-4 sm:gap-8 md:mt-12">
             {otherAdvocates.map((advocate) => (
               <AdvocateCard key={advocate.slug} advocate={advocate} />
             ))}

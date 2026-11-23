@@ -31,9 +31,9 @@ function CoCounselProfiles() {
       />
 
       {/* Section 2: Co-Counsel Profiles */}
-      <section className="py-24 sm:py-32">
+      <section className="py-16 md:py-24 lg:py-32">
         <div className="container-x">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
             {coCounsels.map((advocate) => (
               <AdvocateCard key={advocate.slug} advocate={advocate} />
             ))}
@@ -42,18 +42,18 @@ function CoCounselProfiles() {
       </section>
 
       {/* Section 3: More Profiles */}
-      <section className="bg-ivory py-24 sm:py-32">
+      <section className="bg-ivory py-16 md:py-24 lg:py-32">
         <div className="container-x">
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
               <p className="eyebrow">Our Advocates</p>
-              <h2 className="mt-3 font-serif text-5xl text-navy">More Profiles</h2>
-              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
+              <h2 className="mt-3 font-serif text-4xl text-navy md:text-5xl">More Profiles</h2>
+              <p className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 Our firm collaborates with a dedicated network of advocates and legal professionals to provide comprehensive and effective legal solutions.
               </p>
             </div>
           </Reveal>
-          <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-8 md:mt-16 lg:grid-cols-3">
             {otherAdvocates.map((advocate) => (
               <AdvocateCard key={advocate.slug} advocate={advocate} />
             ))}

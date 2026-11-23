@@ -19,9 +19,9 @@ export function Header() {
   return (
     <>
       <div className="bg-navy-2 text-navy-muted">
-        <div className="container-x flex h-9 items-center justify-between text-[0.7rem] tracking-[0.18em] uppercase">
-          <span>Integrated Legal, Financial &amp; Business Support</span>
-          <a href={firm.phoneHref} className="hidden items-center gap-2 text-champagne hover:text-gold sm:flex">
+        <div className="container-x flex h-9 items-center justify-center text-[0.65rem] tracking-[0.18em] uppercase md:justify-between md:text-[0.7rem]">
+          <span className="hidden truncate md:block">Integrated Legal, Financial &amp; Business Support</span>
+          <a href={firm.phoneHref} className="flex shrink-0 items-center gap-2 text-champagne hover:text-gold">
             <Phone className="h-3 w-3" /> {firm.phone}
           </a>
         </div>
@@ -48,8 +48,8 @@ export function Header() {
           </div>
         </div>
         {open && (
-          <nav className="border-t border-gold/20 bg-navy xl:hidden" aria-label="Mobile">
-            <div className="container-x flex flex-col py-4">
+          <nav className="max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain border-t border-gold/20 bg-navy xl:hidden" aria-label="Mobile">
+            <div className="container-x flex flex-col py-4 md:grid md:grid-cols-2 md:gap-x-10">
               {navLinks.map((l) => (
                 <Link key={l.to} to={l.to} onClick={() => setOpen(false)} activeOptions={{ exact: l.to === "/" }}
                   className="border-b border-navy-foreground/10 py-3.5 font-serif text-xl text-navy-foreground"
@@ -57,7 +57,7 @@ export function Header() {
                   {l.label}
                 </Link>
               ))}
-              <Link to="/contact" hash="consultation" onClick={() => setOpen(false)} className="mt-5 bg-gold py-3.5 text-center text-sm font-semibold uppercase tracking-[0.14em] text-navy">
+              <Link to="/contact" hash="consultation" onClick={() => setOpen(false)} className="mt-5 bg-gold py-3.5 text-center md:col-span-2 text-sm font-semibold uppercase tracking-[0.14em] text-navy">
                 Book a Consultation
               </Link>
             </div>

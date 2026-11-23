@@ -17,7 +17,7 @@ function JudgmentDetails() {
   const { judgment } = Route.useLoaderData();
 
   return (
-    <section className="py-24 sm:py-32">
+    <section className="py-16 md:py-24 lg:py-32">
       <div className="container-x">
         <div className="mx-auto max-w-4xl">
           <SectionHeading
@@ -25,7 +25,7 @@ function JudgmentDetails() {
             title={judgment.title}
             center
           />
-          <div className="prose prose-lg mx-auto mt-12">
+          <div className="prose prose-lg mx-auto mt-10 md:mt-12">
             <p><strong>Case Number:</strong> {judgment.caseNumber}</p>
             <p><strong>Date of Judgment:</strong> {judgment.date}</p>
             <p><strong>Category:</strong> {judgment.category}</p>

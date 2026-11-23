@@ -15,9 +15,9 @@ function RecentJudgments() {
         title="Recent Judgments"
         intro="An archive of select case summaries and legal analyses from our team, offering insights into notable judgments from the Supreme Court of India and various High Courts."
       />
-      <section className="py-24 sm:py-32">
+      <section className="py-16 md:py-24 lg:py-32">
         <div className="container-x">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-5 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
             {judgments.map((judgment) => (
               <JudgmentCard key={judgment.slug} judgment={judgment} />
             ))}

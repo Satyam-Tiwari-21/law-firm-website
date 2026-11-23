@@ -15,9 +15,9 @@ function Advocates() {
         title="Experienced Professionals Supporting Every Matter."
         intro="Our firm collaborates with a dedicated network of advocates and legal professionals to provide comprehensive and effective legal solutions. Meet the team that supports our mission."
       />
-      <section className="py-24 md:py-32">
+      <section className="py-16 md:py-24 lg:py-32">
         <div className="container-x">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
             {advocates.map((advocate) => (
               <AdvocateCard key={advocate.slug} advocate={advocate} />
             ))}

@@ -34,23 +34,23 @@ function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[88vh] overflow-hidden">
+      <section className="relative min-h-[88svh] overflow-hidden">
         <img src="/tingey-injury-law-firm-yCdPU73kGSc-unsplash.png" alt="Statue of Lady Justice" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-hero" />
-        <div className="container-x relative flex min-h-[88vh] flex-col justify-center py-24">
+        <div className="container-x relative flex min-h-[88svh] flex-col justify-center py-16 sm:py-24">
           <p className="eyebrow animate-rise">Bridging People and Justice</p>
-          <h1 className="animate-rise mt-6 max-w-4xl text-5xl leading-[0.98] text-navy-foreground sm:text-6xl md:text-8xl" style={{ animationDelay: "120ms" }}>
+          <h1 className="animate-rise mt-6 max-w-4xl text-[2.75rem] leading-[1] text-navy-foreground sm:text-6xl md:text-7xl lg:text-8xl" style={{ animationDelay: "120ms" }}>
             Where Legal Authority Meets <em className="text-champagne">Business Vision.</em>
           </h1>
-          <span className="gold-rule animate-line mt-10 w-28" style={{ animationDelay: "300ms" }} />
-          <p className="animate-rise mt-8 max-w-2xl text-lg leading-relaxed text-navy-muted" style={{ animationDelay: "260ms" }}>
+          <span className="gold-rule animate-line mt-8 w-28 md:mt-10" style={{ animationDelay: "300ms" }} />
+          <p className="animate-rise mt-6 max-w-2xl text-base leading-relaxed text-navy-muted sm:text-lg md:mt-8" style={{ animationDelay: "260ms" }}>
             From legal assistance and dispute resolution to financial consultancy, compliance, and startup advisory, Justice Law Bridge brings essential professional services together under one roof.
           </p>
-          <div className="animate-rise mt-10 flex flex-wrap gap-4" style={{ animationDelay: "380ms" }}>
+          <div className="animate-rise mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4" style={{ animationDelay: "380ms" }}>
             <GoldButton to="/services">Explore Our Services</GoldButton>
             <GoldButton to="/contact" hash="consultation" variant="outline">Speak With Our Team</GoldButton>
           </div>
-          <p className="animate-rise mt-14 text-[0.7rem] uppercase tracking-[0.28em] text-navy-muted" style={{ animationDelay: "500ms" }}>
+          <p className="animate-rise mt-10 text-[0.65rem] uppercase leading-loose tracking-[0.22em] text-navy-muted sm:mt-14 sm:text-[0.7rem] sm:tracking-[0.28em]" style={{ animationDelay: "500ms" }}>
             Legal Support <span className="text-gold">|</span> Financial Advisory <span className="text-gold">|</span> Corporate &amp; Startup Services
           </p>
         </div>
@@ -59,12 +59,12 @@ function Home() {
       <AdvocateGrid />
 
       {/* Services */}
-      <section className="bg-background py-24 md:py-32">
+      <section className="bg-background py-16 md:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading eyebrow="Our Services" title="Comprehensive Services. One Trusted Partner." intro="Five practice areas, each delivered according to the firm's capabilities and the professional qualifications the work requires." />
-          <div className="mt-16 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-px bg-border md:mt-16 md:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => (
-              <Reveal key={s.slug} delay={(i % 3) * 100} className="group relative flex flex-col bg-card p-9 transition-colors duration-500 hover:bg-navy">
+              <Reveal key={s.slug} delay={(i % 3) * 100} className="group relative flex flex-col bg-card p-7 transition-colors md:p-9 duration-500 hover:bg-navy">
                 <div className="flex items-start justify-between">
                   <s.icon className="h-8 w-8 text-gold" strokeWidth={1.25} />
                   <span className="font-serif text-4xl text-border transition-colors group-hover:text-gold/40">{s.num}</span>
@@ -76,8 +76,8 @@ function Home() {
                 </Link>
               </Reveal>
             ))}
-            <Reveal className="flex flex-col justify-between bg-navy p-9">
-              <p className="font-serif text-3xl leading-snug text-navy-foreground">Not sure where your matter fits?</p>
+            <Reveal className="flex flex-col justify-between gap-6 bg-navy p-7 md:p-9">
+              <p className="font-serif text-2xl leading-snug text-navy-foreground md:text-3xl">Not sure where your matter fits?</p>
               <GoldButton to="/contact" hash="consultation">Ask Our Team</GoldButton>
             </Reveal>
           </div>
@@ -85,12 +85,12 @@ function Home() {
       </section>
 
       {/* Who we serve */}
-      <section className="bg-navy py-24 md:py-32">
+      <section className="bg-navy py-16 md:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading tone="dark" eyebrow="Who We Serve" title="Built Around the Needs of People and Businesses." />
-          <div className="mt-16 grid gap-px bg-gold/20 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-px bg-gold/20 sm:grid-cols-2 md:mt-16 lg:grid-cols-3">
             {segments.map((s, i) => (
-              <Reveal key={s.title} delay={(i % 3) * 100} className={i % 2 === 0 ? "bg-navy p-9" : "bg-navy-2 p-9"}>
+              <Reveal key={s.title} delay={(i % 3) * 100} className={i % 2 === 0 ? "bg-navy p-7 md:p-9" : "bg-navy-2 p-7 md:p-9"}>
                 <s.icon className="h-7 w-7 text-gold" strokeWidth={1.25} />
                 <h3 className="mt-6 text-2xl text-navy-foreground">{s.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-navy-muted">{s.text}</p>
@@ -104,17 +104,17 @@ function Home() {
       {/* Why */}
       <section className="bg-ivory">
         <div className="grid lg:grid-cols-2">
-          <div className="relative min-h-[420px]">
+          <div className="relative min-h-[260px] sm:min-h-[360px] lg:min-h-[420px]">
             <img src={library} alt="Law library and boardroom in warm lamp light" loading="lazy" width={1600} height={1008} className="absolute inset-0 h-full w-full object-cover" />
           </div>
-          <div className="px-6 py-20 md:px-16 md:py-28">
+          <div className="px-5 py-16 sm:px-10 md:py-24 lg:px-16 lg:py-28">
             <SectionHeading eyebrow="Why Justice Law Bridge" title="A More Connected Approach to Professional Services." intro="Our service approach and the strengths we work to deliver for every client." />
             <ul className="mt-10 space-y-5">
               {why.map((w, i) => (
                 <Reveal key={w} delay={i * 60}>
                   <li className="flex items-start gap-4 border-b border-gold/20 pb-5">
                     <Check className="mt-1 h-4 w-4 shrink-0 text-gold" />
-                    <span className="font-serif text-xl text-navy">{w}</span>
+                    <span className="font-serif text-lg text-navy sm:text-xl">{w}</span>
                   </li>
                 </Reveal>
               ))}
@@ -124,10 +124,10 @@ function Home() {
       </section>
 
       {/* Leadership */}
-      <section className="bg-background py-24 md:py-32">
+      <section className="bg-background py-16 md:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading eyebrow="Leadership" title="Leadership Grounded in Professional Responsibility." />
-          <div className="mt-14"><LeadershipCards /></div>
+          <div className="mt-10 md:mt-14"><LeadershipCards /></div>
         </div>
       </section>
 

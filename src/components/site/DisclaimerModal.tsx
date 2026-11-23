@@ -9,7 +9,7 @@ function GoldButton({ onClick, children }: { onClick: () => void; children: Reac
     <button
       onClick={onClick}
       className={cn(
-        "group inline-flex items-center gap-3 bg-gold px-7 py-4 text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-navy transition-colors hover:bg-champagne",
+        "group inline-flex w-full items-center justify-center gap-3 bg-gold px-6 py-4 text-center text-[0.78rem] sm:w-auto sm:px-7 font-semibold uppercase tracking-[0.16em] text-navy transition-colors hover:bg-champagne",
       )}
     >
       {children}
@@ -47,11 +47,11 @@ export function DisclaimerModal() {
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
-      <div className="w-full max-w-lg rounded-lg border border-gold/20 bg-navy p-8 shadow-2xl m-4">
-        <h2 className="font-serif text-3xl text-ivory">Disclaimer</h2>
+    <div className="fixed inset-0 z-[60] flex items-center justify-center overflow-y-auto bg-black/50 p-4 backdrop-blur-sm">
+      <div className="my-auto w-full max-w-lg rounded-lg border border-gold/20 bg-navy p-6 shadow-2xl sm:p-8">
+        <h2 className="font-serif text-2xl text-ivory sm:text-3xl">Disclaimer</h2>
         <div className="mt-4 h-px w-20 bg-gold/50" />
-        <p className="mt-6 text-ivory/80 leading-relaxed">
+        <p className="mt-6 text-sm leading-relaxed text-ivory/80 sm:text-base">
           In accordance with the rules of the Bar Council of India, we are not
           permitted to advertise. The information provided on this website is
           intended solely for informational purposes and does not constitute legal
