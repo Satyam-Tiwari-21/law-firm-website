@@ -11,8 +11,7 @@ export const Route = createFileRoute("/advocates/$slug")({
     }
     return advocate;
   },
-  head: (data) => {
-    const advocate = data.data;
+  head: ({ loaderData: advocate }) => {
     if (!advocate) return seo("Advocate Profile", "Profile for one of our advocates.");
     return seo(`${advocate.name} - ${advocate.role}`, advocate.shortBio);
   },
