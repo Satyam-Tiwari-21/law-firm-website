@@ -22,7 +22,7 @@ export function AdvocateCard({ advocate }: { advocate: (typeof advocates)[0] }) 
         <div className="mt-4">
           <h3 className="font-serif text-2xl text-navy">{advocate.name}</h3>
           <p className="text-sm text-muted-foreground">{advocate.role}</p>
-          <Link to={`/advocates/${advocate.slug}`} className="mt-4 inline-block font-semibold text-navy">
+          <Link to="/advocates/$slug" params={{ slug: advocate.slug }} className="mt-4 inline-block font-semibold text-navy">
             View Profile →
           </Link>
         </div>
