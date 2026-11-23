@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { seo, advocates } from "@/lib/site";
+import { seo, listedAdvocates } from "@/lib/site";
 import { PageHero, AdvocateCard, OfficeStaffCards } from "@/components/site/Blocks";
 
 export const Route = createFileRoute("/advocates/")({
@@ -18,7 +18,7 @@ function Advocates() {
       <section className="py-16 md:py-24 lg:py-32">
         <div className="container-x">
           <div className="grid gap-4 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
-            {advocates.map((advocate) => (
+            {listedAdvocates.map((advocate) => (
               <AdvocateCard key={advocate.slug} advocate={advocate} />
             ))}
           </div>

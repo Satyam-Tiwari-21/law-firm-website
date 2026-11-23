@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { advocates, seo } from "@/lib/site";
+import { advocates, listedAdvocates, seo } from "@/lib/site";
 import { Reveal } from "@/components/site/Reveal";
 import { AdvocateCard } from "@/components/site/AdvocateCard";
 
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/advocates/$slug")({
 
 function AdvocateProfilePage() {
   const advocate = Route.useLoaderData();
-  const otherAdvocates = advocates.filter((a) => a.slug !== advocate.slug).slice(0, 2);
+  const otherAdvocates = listedAdvocates.filter((a) => a.slug !== advocate.slug).slice(0, 2);
 
   return (
     <>

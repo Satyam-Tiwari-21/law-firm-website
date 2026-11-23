@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { cn } from "@/lib/utils";
-import { leaders, mission, vision, advocates, type AdvocateProfile, officeStaff, OfficeStaffProfile } from "@/lib/site";
+import { leaders, mission, vision, advocates, listedAdvocates, type AdvocateProfile, officeStaff, OfficeStaffProfile } from "@/lib/site";
 
 export function SectionHeading({ eyebrow, title, intro, tone = "light", center }: { eyebrow: string; title: string; intro?: string; tone?: "light" | "dark"; center?: boolean }) {
   return (
@@ -154,7 +154,7 @@ export function AdvocateGrid() {
         </div>
         {/* Flex-wrap (not grid) so an incomplete last row stays centred on tablets. */}
         <div className="mt-10 flex flex-wrap justify-center gap-4 sm:gap-6 md:mt-16">
-          {advocates.map((advocate) => (
+          {listedAdvocates.map((advocate) => (
             <div key={advocate.slug} className="w-full sm:w-[calc((100%-1.5rem)/2)] md:w-[calc((100%-3rem)/3)] xl:w-[calc((100%-6rem)/5)]">
               <AdvocateCard advocate={advocate} />
             </div>

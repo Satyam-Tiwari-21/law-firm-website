@@ -260,6 +260,8 @@ export type AdvocateProfile = {
   experience?: string;
   enrolment?: string;
   education?: string;
+  /** Show this card only on the Co-Counsel page, not in general advocate listings. */
+  coCounselOnly?: boolean;
 };
 
 export type OfficeStaffProfile = {
@@ -284,6 +286,7 @@ export const advocates: AdvocateProfile[] = [
     role: "Co-Counsel / Advocate",
     initials: "AG",
     image: "/abhay.png",
+    coCounselOnly: true,
     shortBio: "25+ years of experience in civil, criminal, and revenue matters, with extensive courtroom expertise.",
     biography: "Advocate Abhay Kumar Gupta is an experienced legal professional with over 25 years of practice since 1999. He specializes in civil, criminal, and revenue matters, with extensive experience representing clients before District and Sessions Courts, other subordinate courts, and District Collectorate proceedings. He holds an M.A. and LL.B., bringing substantial legal expertise and practical courtroom experience.",
     qualifications: ["M.A.", "LL.B."],
@@ -350,6 +353,9 @@ export const advocates: AdvocateProfile[] = [
     experience: "Practicing in the Rajasthan High Court, Jaipur, with a focus on criminal law, civil disputes, revenue matters, and motor accident cases."
   },
 ];
+
+/** Advocates shown in general listings (Home, /advocates, "More Profiles"). */
+export const listedAdvocates = advocates.filter((a) => !a.coCounselOnly);
 
 export const vision = "To become a trusted one-stop legal and business support firm that makes justice and professional services accessible and affordable for all.";
 export const mission = "To provide qualified, ethical legal assistance; promote legal aid and awareness for underserved communities; explore technology-enabled dispute resolution; and deliver integrated support for startups, MSMEs, and institutions.";
