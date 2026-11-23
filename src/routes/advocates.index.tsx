@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { seo, advocates } from "@/lib/site";
 import { PageHero, AdvocateCard, OfficeStaffCards } from "@/components/site/Blocks";
 
-export const Route = createFileRoute("/advocates")({
+export const Route = createFileRoute("/advocates/")({
   head: () => seo("Our Advocates — Justice Law Bridge Legal Services LLP", "Meet the experienced professionals supporting every matter at Justice Law Bridge."),
   component: Advocates,
 });
